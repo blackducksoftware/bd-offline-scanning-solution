@@ -1,0 +1,88 @@
+body, h1, h2, h3, td, th, p, a {
+ color:rgb(41,20,115);
+ font-family:arial, sans-serif, helvetica;
+ font-size:10pt;
+}
+
+body { 
+  color:black;
+}
+
+
+h1 { 
+  font-size:20pt; 
+  color:rgb(49,48,49);
+}
+
+
+h2 { 
+  font-size:12pt; 
+  background-color:rgb(90,77,189);
+  color:white;
+  border-color:rgb(90,77,189);
+  border-width:2px; 
+  border-style:solid;
+}
+
+
+h3 { 
+  font-size: 12pt; 
+  background-color: white;
+}
+
+
+a { font-weight: bold }
+a:link { text-decoration: none;  }
+a:visited { text-decoration: none;  }
+a:active { text-decoration: none;  }
+a:hover { text-decoration: underline;  }
+
+
+a.top {  font-weight: normal; font-size: 14pt;  }
+a.top:link { text-decoration: none;  }
+a.top:visited { text-decoration: none;  }
+a.top:active { text-decoration: none;  }
+a.top:hover { text-decoration: underline;  }
+
+a.nav:link { text-decoration: none;  }
+a.nav:visited { text-decoration: none;   }
+a.nav:active { text-decoration: none;  }
+a.nav:hover { text-decoration: underline;  }
+
+a.white:link { text-decoration: none;
+               font-size: 12pt; 
+               color: white;  }
+a.white:visited { text-decoration: none;   
+               font-size: 12pt; 
+               color: white;  }
+a.white:active { text-decoration: none; 
+               font-size: 12pt; 
+               color: white;  }
+a.white:hover { text-decoration: underline;  
+               font-size: 12pt; 
+               color: white;  }
+
+
+td.top {
+  font-weight: normal; font-size: 14pt; width: 100%; text-align: right; font-style: italic; vertical-align: middle; height: 100%;
+}
+
+
+pre {
+  color:rgb(49,48,49); 
+  font-family:Fixedsys,Courier; 
+ font-weight:normal;
+}
+
+
+
+td.label {
+ color:white;
+  background-color:rgb(222,223,222);
+ font-weight:bold;
+  text-align:right;
+}
+
+
+
+

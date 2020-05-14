@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+  <title>ourfaces tree example 2</title>
+  <link rel="stylesheet" type="text/css" href="../ourfaces.css">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a href="../platform/main.html" class="white"> Components </a> - <a
+ href="tree_overview.html" class="white"> Tree </a> - Initialization
+by Beans
+</h2>
+<br>
+<span style="color: rgb(0, 0, 0);">To have full control over the UITree
+instance it is binded to a bean.</span><br>
+<br>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre>...<br>private UITree uiTree = null;<br>public UITree getUITree() {<br>    FacesContext context = FacesContext.getCurrentInstance();<br>    TreeModel treeModel = getTreeModel2();<br>    String value = "#{TreeBean.treeModel2}";<br>    ValueBinding vb = context.getApplication().createValueBinding(value);<br>    UITree uiTree = new UITree();<br>    uiTree.setSynchronizationWithModelOn(true);<br>    uiTree.setValueBinding("value", vb);<br>    uiTree.initializeUITreefromModel();<br>    return uiTree;<br>}<br>public void setUITree(UITree uiTree) {<br>    this.uiTree = uiTree;<br>}<br><br>private TreeModel treeModel2 = null;<br>public void setTreeModel2(TreeModel treeModel2) {<br>    this.treeModel2 = treeModel2; <br>}<br>public TreeModel getTreeModel2() {<br>    if (treeModel2 == null)<br>        this.initializeTreeModelForExample2Action();<br>    return treeModel2;<br>}<br>public void initializeTreeModelForExample2Action() {<br>    treeModel2 = new TreeModel();<br>    TreeNodeModel root =  new TreeNodeModel(treeModel2, "root", "Me Myself");<br>    TreeNodeModel n2  = new TreeNodeModel(root, "2", "My Father");<br>    TreeNodeModel n3  = new TreeNodeModel(root, "3", "My Mother");<br>    ...<br>}<br>...<br></pre>
+      </td>
+    </tr>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">&lt;%@ taglib uri="http://java.sun.com/jsf/core"   prefix="f" %&gt;<br>&lt;%@ taglib uri="http://java.sun.com/jsf/html"   prefix="h" %&gt;<br>&lt;%@ taglib uri="http://ourfaces.dev.sun.net/components" prefix="ourfaces" %&gt;<br><br>&lt;f:view&gt;<br>    &lt;html&gt;<br>        &lt;head&gt;<br>            &lt;title&gt;instance binding &lt;/title&gt;<br>        &lt;/head&gt;<br>        &lt;body&gt;<br>            &lt;h:form&gt;<br>                &lt;ourfaces:stylesheet path="/tree/tree-control.css"/&gt;        <br>                &lt;ourfaces:tree binding="#{TreeBean.UITree}"/&gt;   <br>            &lt;/h:form&gt;<br>        &lt;/body&gt;<br>    &lt;/html&gt;<br>&lt;/f:view&gt;<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td
+ style="background-color: rgb(255, 255, 204); text-align: center; vertical-align: middle;">
+      <table cellpadding="0" cellspacing="0" border="0"
+ style="text-align: left; width: 100%; background-color: rgb(255, 255, 255);">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ src="../skin/default/tree/example2.gif" alt="" height="135" width="171" border="0"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example2.jsp"><img src="../skin/default/tree/execute.gif"
+ alt="" style="border: 0px solid ; height: 24px; width: 24px;" title=""
+ align="middle"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<span style="color: rgb(0, 0, 0);">The tag </span><code>&lt;ourfaces:tree/&gt;</code><span
+ style="color: rgb(0, 0, 0);"> refers to <span
+ style="font-family: monospace;">UI</span></span><code>Tree </code><span
+ style="color: rgb(0, 0, 0);">through the&nbsp; <span
+ style="font-family: monospace;">binding="#{TreeBean.UITree}"</span></span><span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;"><span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;"><span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;"> </span></span></span></span></span><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);"></span></span></span><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);"><span
+ style="color: rgb(0, 0, 0);">accessed via the bean</span></span></span><span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;">
+"TreeBean"</span></span><code>.<span
+ style="font-family: arial,sans-serif,helvetica;"></span></code><span
+ style="color: rgb(0, 0, 0);"></span><span style="color: rgb(0, 0, 0);"></span><br>
+<br>
+<span style="color: rgb(0, 0, 0);"><span style="font-family: monospace;"><br>
+</span></span><code></code><span style="color: rgb(0, 0, 0);"> </span><span
+ style="color: rgb(0, 0, 0);"> </span><span
+ style="color: rgb(0, 0, 0);"></span>
+<p></p>
+</body>
+</html>

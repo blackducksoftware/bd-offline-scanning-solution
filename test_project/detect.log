@@ -1,0 +1,355 @@
+______     _            _
+|  _  \   | |          | |
+| | | |___| |_ ___  ___| |_
+| | | / _ \ __/ _ \/ __| __|
+| |/ /  __/ ||  __/ (__| |_
+|___/ \___|\__\___|\___|\__|
+
+2020-05-05 14:05:04 DEBUG [main] --- Initializing detect.
+2020-05-05 14:05:04 DEBUG [main] --- You seem to be running in a MAC operating system.
+2020-05-05 14:05:04 DEBUG [main] --- Detect boot begin.
+
+Detect Version: 6.2.1
+
+2020-05-05 14:05:05 DEBUG [main] --- Configuration processed completely.
+2020-05-05 14:05:05 INFO  [main] --- 
+2020-05-05 14:05:05 INFO  [main] --- Current property values:
+2020-05-05 14:05:05 INFO  [main] --- --property = value [notes]
+2020-05-05 14:05:05 INFO  [main] --- ------------------------------------------------------------
+2020-05-05 14:05:05 INFO  [main] --- blackduck.api.token = **************************************************************************************************** [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- blackduck.offline.mode = false [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- blackduck.trust.cert = true [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- blackduck.url = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.blackduck.signature.scanner.local.path = /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1 [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.cleanup = false [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.detector.search.depth = 2 [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.output.path = /Users/gsnyder/Projects/wf-scanning-solution/output-dir [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.parallel.processors = -1 [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.pip.requirements.path = ./requirements.txt [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.project.name = test-project [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.project.version.name = 1.0 [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- detect.scan.output.path = /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- logging.level.detect = DEBUG [cmd] 
+2020-05-05 14:05:05 INFO  [main] --- ------------------------------------------------------------
+2020-05-05 14:05:05 INFO  [main] --- 
+2020-05-05 14:05:05 DEBUG [main] --- Initializing Detect.
+2020-05-05 14:05:05 INFO  [main] --- Tilde's will be automatically resolved to USER HOME.
+2020-05-05 14:05:05 INFO  [main] --- Source directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:05 INFO  [main] --- Output directory: /Users/gsnyder/Projects/wf-scanning-solution/output-dir
+2020-05-05 14:05:05 INFO  [main] --- Run directory: /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802
+2020-05-05 14:05:05 DEBUG [main] --- Main boot completed. Deciding what Detect should do.
+2020-05-05 14:05:05 INFO  [main] --- 
+2020-05-05 14:05:05 DEBUG [main] --- Black Duck will run: A Black Duck url was found.
+2020-05-05 14:05:05 DEBUG [main] --- Polaris will NOT run: The Polaris url must be provided.
+2020-05-05 14:05:05 DEBUG [main] --- Decided what products will be run. Starting product boot.
+2020-05-05 14:05:05 DEBUG [main] --- Detect product boot start.
+2020-05-05 14:05:05 DEBUG [main] --- Will boot Black Duck product.
+2020-05-05 14:05:05 DEBUG [main] --- Detect will check communication with the Black Duck server.
+2020-05-05 14:05:06 INFO  [main] --- Connection to the Black Duck server was successful.
+2020-05-05 14:05:06 WARN  [main] --- Automatically trusting server certificates - not recommended for production use.
+2020-05-05 14:05:06 INFO  [main] --- Successfully connected to Black Duck (version 2020.4.0)!
+2020-05-05 14:05:06 DEBUG [main] --- Connected as: sysadmin
+2020-05-05 14:05:07 DEBUG [main] --- Roles: System Administrator, Global Code Scanner, Policy Manager, License Manager, Global Project Viewer, Project Viewer, Project Creator, Project Manager, Copyright Editor, Global Security Manager, Component Manager, Super User
+2020-05-05 14:05:07 DEBUG [main] --- Group: 
+2020-05-05 14:05:07 DEBUG [main] --- Detect product boot completed.
+2020-05-05 14:05:07 DEBUG [main] --- Guessed Detect jar location as /Users/gsnyder/Projects/wf-scanning-solution/detect_files/synopsys-detect-6.2.1.jar
+2020-05-05 14:05:07 DEBUG [main] --- Checking for jar file: /Users/gsnyder/Projects/wf-scanning-solution/detect_files/synopsys-detect-6.2.1.jar
+2020-05-05 14:05:07 DEBUG [main] --- Found detect jar file.
+2020-05-05 14:05:07 DEBUG [main] --- Detect boot completed.
+2020-05-05 14:05:07 DEBUG [main] --- Detect will attempt to run.
+2020-05-05 14:05:07 DEBUG [main] --- Detect run begin: 2020-05-05-18-05-04-802
+2020-05-05 14:05:07 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:07 INFO  [main] --- Polaris tools will not be run.
+2020-05-05 14:05:07 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:07 INFO  [main] --- Will include the Docker tool.
+2020-05-05 14:05:07 INFO  [main] --- Was not applicable.
+2020-05-05 14:05:07 INFO  [main] --- Docker actions finished.
+2020-05-05 14:05:07 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:07 INFO  [main] --- Will include the Bazel tool.
+2020-05-05 14:05:07 INFO  [main] --- Was not applicable.
+2020-05-05 14:05:07 INFO  [main] --- Bazel actions finished.
+2020-05-05 14:05:07 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:07 INFO  [main] --- Will include the detector tool.
+2020-05-05 14:05:07 DEBUG [main] --- Initializing detector system.
+2020-05-05 14:05:07 DEBUG [main] --- Starting detector file system traversal.
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/tools
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/db-charmer
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/db-charmer/kovyrin-db-charmer-28c8115
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/licenses
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_jo
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_jo/util
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_jo/io
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/MercurialToolbar
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/RuneKit
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/lib
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/petris
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/petris/gitpan-petris-08e5dc8
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/OpenSSL
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/OpenSSL/times
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/OpenSSL/certs
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/OpenSSL/set
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_pgsl
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/apache-ant
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/apache-ant/lib
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_ourfaces
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_ourfaces/tree
+2020-05-05 14:05:07 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/wf-scanning-solution/test_project/src_ourfaces/code
+2020-05-05 14:05:07 INFO  [main] --- Searching for detectors. This may take a while.
+2020-05-05 14:05:07 DEBUG [main] --- Found (2) applicable detectors in: /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:07 DEBUG [pool-2-thread-1] --- starting phone home
+2020-05-05 14:05:07 DEBUG [main] --- 
+2020-05-05 14:05:07 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:07 DEBUG [main] --- Search results
+2020-05-05 14:05:07 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:07 DEBUG [main] --- /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:07 DEBUG [main] --- 	APPLIES: MAVEN - Maven Pom, PIP - Pip Inspector
+2020-05-05 14:05:07 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:07 DEBUG [main] --- 
+2020-05-05 14:05:07 DEBUG [pool-2-thread-1] --- Phoning home to https://www.google-analytics.com/batch
+2020-05-05 14:05:07 INFO  [main] --- 
+2020-05-05 14:05:07 DEBUG [main] --- Starting detector preparation.
+2020-05-05 14:05:07 DEBUG [main] --- 
+2020-05-05 14:05:07 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:07 DEBUG [main] --- Preparation for extraction
+2020-05-05 14:05:07 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:07 DEBUG [main] --- /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:07 DEBUG [main] --- 	    READY: MAVEN - Maven Pom, PIP - Pip Inspector
+2020-05-05 14:05:07 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:07 DEBUG [main] --- 
+2020-05-05 14:05:07 DEBUG [main] --- Preparing detectors for discovery and extraction.
+2020-05-05 14:05:07 DEBUG [main] --- Counting detectors that will be evaluated.
+2020-05-05 14:05:07 DEBUG [main] --- Total number of detectors: 2
+2020-05-05 14:05:07 DEBUG [main] --- Starting detector project discovery.
+2020-05-05 14:05:07 DEBUG [main] --- Discovery 1 of 2 (0%)
+2020-05-05 14:05:07 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:07 DEBUG [main] --- Starting discovery: MAVEN - Maven Pom
+2020-05-05 14:05:07 DEBUG [main] --- Identifier: MAVEN-0
+2020-05-05 14:05:07 DEBUG [main] --- mavenExe: /usr/local/bin/mvn
+2020-05-05 14:05:07 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:07 INFO  [main] --- Running executable >/usr/local/bin/mvn dependency:tree -T1
+2020-05-05 14:05:08 DEBUG [pool-2-thread-1] --- completed phone home
+2020-05-05 14:05:08 DEBUG [main-Executable_Stream_Thread] --- [INFO] Scanning for projects...
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] 
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] ----------------------< com.mycompany.app:my-app >----------------------
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] Building my-app 1.0
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] --------------------------------[ jar ]---------------------------------
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] 
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ my-app ---
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] com.mycompany.app:my-app:jar:1.0
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- junit:junit:jar:4.11:test
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- org.apache.struts:struts2-core:jar:2.5.8:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- ognl:ognl:jar:3.1.12:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  |  \- org.javassist:javassist:jar:3.20.0-GA:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.7:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.2:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- commons-io:commons-io:jar:2.4:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  \- org.apache.commons:commons-lang3:jar:3.4:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- net.sourceforge.jwebunit:jwebunit-core:jar:1.4.1:test
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- regexp:regexp:jar:1.3:test
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  \- javax.servlet:servlet-api:jar:2.4:test
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] \- org.apache.logging.log4j:log4j-core:jar:2.11.1:compile
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] ------------------------------------------------------------------------
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] BUILD SUCCESS
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] ------------------------------------------------------------------------
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] Total time:  0.965 s
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] Finished at: 2020-05-05T14:05:09-04:00
+2020-05-05 14:05:09 DEBUG [main-Executable_Stream_Thread] --- [INFO] ------------------------------------------------------------------------
+2020-05-05 14:05:09 INFO  [main] --- Executable finished: 0
+2020-05-05 14:05:09 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:09 DEBUG [main] --- Finished discovery: SUCCESS
+2020-05-05 14:05:09 DEBUG [main] --- Project information found: true
+2020-05-05 14:05:09 DEBUG [main] --- Project name found: my-app
+2020-05-05 14:05:09 DEBUG [main] --- Project version found: 1.0
+2020-05-05 14:05:09 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:09 DEBUG [main] --- Discovery 2 of 2 (50%)
+2020-05-05 14:05:09 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:09 DEBUG [main] --- Starting discovery: PIP - Pip Inspector
+2020-05-05 14:05:09 DEBUG [main] --- Identifier: PIP-1
+2020-05-05 14:05:09 DEBUG [main] --- setupFile: null
+2020-05-05 14:05:09 DEBUG [main] --- pipInspector: /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/shared/pip/pip-inspector.py
+2020-05-05 14:05:09 DEBUG [main] --- pythonExe: /Users/gsnyder/Envs/blackduck/bin/python
+2020-05-05 14:05:09 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:09 INFO  [main] --- Running executable >/Users/gsnyder/Envs/blackduck/bin/python /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/shared/pip/pip-inspector.py --requirements=/Users/gsnyder/Projects/wf-scanning-solution/test_project/./requirements.txt
+2020-05-05 14:05:10 DEBUG [main-Executable_Stream_Thread] --- p?/Users/gsnyder/Projects/wf-scanning-solution/test_project/./requirements.txt
+2020-05-05 14:05:10 DEBUG [main-Executable_Stream_Thread] --- n?==v?
+2020-05-05 14:05:10 INFO  [main] --- Executable finished: 0
+2020-05-05 14:05:10 ERROR [main] --- Pip inspector could not parse requirements file @ /Users/gsnyder/Projects/wf-scanning-solution/test_project/./requirements.txt
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Finished discovery: SUCCESS
+2020-05-05 14:05:10 DEBUG [main] --- Project information found: false
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- 
+2020-05-05 14:05:10 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:10 DEBUG [main] --- Discovery results:
+2020-05-05 14:05:10 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:10 DEBUG [main] --- /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:10 DEBUG [main] --- 	Project Information Discoveries: 2
+2020-05-05 14:05:10 DEBUG [main] --- 	Success: MAVEN - Maven Pom, PIP - Pip Inspector
+2020-05-05 14:05:10 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:10 DEBUG [main] --- 
+2020-05-05 14:05:10 DEBUG [main] --- Starting detector extraction.
+2020-05-05 14:05:10 DEBUG [main] --- Extracting 1 of 2 (0%)
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Starting extraction: MAVEN - Maven Pom
+2020-05-05 14:05:10 DEBUG [main] --- Identifier: MAVEN-0
+2020-05-05 14:05:10 DEBUG [main] --- mavenExe: /usr/local/bin/mvn
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Extraction already completed during project discovery.
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Finished extraction: SUCCESS
+2020-05-05 14:05:10 DEBUG [main] --- Code locations found: 1
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Extracting 2 of 2 (50%)
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Starting extraction: PIP - Pip Inspector
+2020-05-05 14:05:10 DEBUG [main] --- Identifier: PIP-1
+2020-05-05 14:05:10 DEBUG [main] --- setupFile: null
+2020-05-05 14:05:10 DEBUG [main] --- pipInspector: /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/shared/pip/pip-inspector.py
+2020-05-05 14:05:10 DEBUG [main] --- pythonExe: /Users/gsnyder/Envs/blackduck/bin/python
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Extraction already completed during project discovery.
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Finished extraction: SUCCESS
+2020-05-05 14:05:10 DEBUG [main] --- Code locations found: 1
+2020-05-05 14:05:10 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Finished detectors.
+2020-05-05 14:05:10 DEBUG [main] --- Publishing file events.
+2020-05-05 14:05:10 INFO  [main] --- 
+2020-05-05 14:05:10 DEBUG [main] --- Exactly one unique detector was found. Using MAVEN found at depth 0 as project info.
+2020-05-05 14:05:10 DEBUG [main] --- Finished running detectors.
+2020-05-05 14:05:10 DEBUG [pool-2-thread-1] --- starting phone home
+2020-05-05 14:05:10 INFO  [main] --- Detector actions finished.
+2020-05-05 14:05:10 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:10 DEBUG [main] --- Completed code location tools.
+2020-05-05 14:05:10 DEBUG [main] --- Determining project info.
+2020-05-05 14:05:10 DEBUG [pool-2-thread-1] --- Phoning home to https://www.google-analytics.com/collect
+2020-05-05 14:05:10 DEBUG [main] --- Using the first ordered tool with project info: DETECTOR
+2020-05-05 14:05:10 INFO  [main] --- Project name: test-project
+2020-05-05 14:05:10 INFO  [main] --- Project version: 1.0
+2020-05-05 14:05:10 DEBUG [main] --- Black Duck tools will run.
+2020-05-05 14:05:10 DEBUG [pool-2-thread-1] --- completed phone home
+2020-05-05 14:05:10 DEBUG [main] --- Getting or creating project.
+2020-05-05 14:05:10 DEBUG [pool-2-thread-1] --- starting phone home
+2020-05-05 14:05:10 DEBUG [pool-2-thread-1] --- Phoning home to https://www.google-analytics.com/collect
+2020-05-05 14:05:10 DEBUG [main] --- No clone project or version name supplied. Will not clone.
+2020-05-05 14:05:11 DEBUG [pool-2-thread-1] --- completed phone home
+2020-05-05 14:05:11 DEBUG [main] --- No 'Application ID' to set.
+2020-05-05 14:05:11 DEBUG [main] --- Will update the following custom fields and values.
+2020-05-05 14:05:11 DEBUG [main] --- Version field 'build-id' will be set to 'build1'.
+2020-05-05 14:05:11 DEBUG [main] --- Did not find any associated options for this field, will use raw values.
+2020-05-05 14:05:11 INFO  [main] --- Successfully updated (1) custom fields.
+2020-05-05 14:05:11 DEBUG [main] --- Will not unmap code locations: Project view was not present, or should not unmap code locations.
+2020-05-05 14:05:11 DEBUG [main] --- Completed project and version actions.
+2020-05-05 14:05:11 DEBUG [main] --- Processing Detect Code Locations.
+2020-05-05 14:05:11 DEBUG [main] --- Creating BDIO code locations.
+2020-05-05 14:05:11 WARN  [main] --- Could not find any dependencies for code location /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:11 DEBUG [main] --- 
+2020-05-05 14:05:11 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:11 DEBUG [main] --- Extraction results:
+2020-05-05 14:05:11 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:11 DEBUG [main] --- /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:11 DEBUG [main] --- 	Code locations: 2
+2020-05-05 14:05:11 DEBUG [main] --- 	Success: MAVEN - Maven Pom, PIP - Pip Inspector
+2020-05-05 14:05:11 DEBUG [main] --- ======================================================================================================
+2020-05-05 14:05:11 DEBUG [main] --- 
+2020-05-05 14:05:11 DEBUG [main] --- Creating BDIO files from code locations.
+2020-05-05 14:05:11 DEBUG [main] --- BDIO Generated: /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/bdio/test_project_1_0__Users_gsnyder_Projects_wf_scanning_solution_test_project_pip_bom.jsonld
+2020-05-05 14:05:11 DEBUG [main] --- BDIO Generated: /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/bdio/test_project_1_0_my_app_com_mycompany_app_my_app_1_0_maven_bom.jsonld
+2020-05-05 14:05:11 INFO  [main] --- Created 2 BDIO files.
+2020-05-05 14:05:11 DEBUG [main] --- Uploading BDIO files.
+2020-05-05 14:05:11 DEBUG [main] --- Uploading test_project_1_0__Users_gsnyder_Projects_wf_scanning_solution_test_project_pip_bom.jsonld to https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com
+2020-05-05 14:05:11 DEBUG [main] --- Uploading test_project_1_0_my_app_com_mycompany_app_my_app_1_0_maven_bom.jsonld to https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com
+2020-05-05 14:05:12 INFO  [main] --- Starting the codelocation file uploads.
+2020-05-05 14:05:12 INFO  [main] --- Completed the codelocation file uploads.
+2020-05-05 14:05:12 DEBUG [main] --- Completed Detect Code Location processing.
+2020-05-05 14:05:12 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:12 INFO  [main] --- Will include the signature scanner tool.
+2020-05-05 14:05:12 DEBUG [main] --- Determined offline local scanner path: /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1
+2020-05-05 14:05:12 DEBUG [main] --- Signature scanner either given an existing path for the scanner or is offline - either way, we won't attempt to manage the install.
+2020-05-05 14:05:12 DEBUG [main] --- Using provided path: /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1
+2020-05-05 14:05:12 DEBUG [main] --- Determined install directory: /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1
+2020-05-05 14:05:12 DEBUG [main] --- Signature scan is online.
+2020-05-05 14:05:13 INFO  [main] --- No scan targets provided - registering the source path /Users/gsnyder/Projects/wf-scanning-solution/test_project to scan
+2020-05-05 14:05:13 INFO  [main] --- Starting the Black Duck Signature Scan commands.
+2020-05-05 14:05:13 DEBUG [pool-3-thread-1] --- The directory structure was likely created manually - be sure the jre folder exists in: /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1
+2020-05-05 14:05:13 DEBUG [pool-3-thread-1] --- Using this java installation : /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1/jre/Contents/Home/bin/java
+2020-05-05 14:05:13 DEBUG [pool-3-thread-1] --- Using the Black Duck hostname : 'ec2-18-217-189-8.us-east-2.compute.amazonaws.com'
+2020-05-05 14:05:13 INFO  [pool-3-thread-1] --- Black Duck CLI command: /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1/jre/Contents/Home/bin/java -Done-jar.silent=true -Done-jar.jar.path=/Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1/lib/cache/scan.cli.impl-standalone.jar -Xmx4096m -jar /Users/gsnyder/Projects/wf-scanning-solution/detect_files/scan.cli-2020.2.1/lib/scan.cli-2020.2.1-standalone.jar --no-prompt --scheme https --host ec2-18-217-189-8.us-east-2.compute.amazonaws.com --port 443 --insecure -v --logDir /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1 --statusWriteDir /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1 --project test-project --release 1.0 --name test_project/test-project/1.0 scan /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Start wrapper: ScanCliWrapperSettings [commandLine=org.apache.commons.cli.CommandLine@238d68ff, fileUriSet=null, scheme=https, host=ec2-18-217-189-8.us-east-2.compute.amazonaws.com, port=443]...
+2020-05-05 14:05:15 WARN  [pool-3-thread-1-Stream Redirect Thread] --- WARN: Unable to find manifest from all manifests.
+2020-05-05 14:05:15 WARN  [pool-3-thread-1-Stream Redirect Thread] --- WARN: Unable to find Hub manifest because the implementation title does not match [Implementation title: ScanCli].
+2020-05-05 14:05:15 WARN  [pool-3-thread-1-Stream Redirect Thread] --- WARN: No manifest found.
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Start scan loop: ScanClientSettings [commandLine=[--no-prompt, --scheme, https, --host, ec2-18-217-189-8.us-east-2.compute.amazonaws.com, --port, 443, --insecure, -v, --logDir, /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1, --statusWriteDir, /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1, --project, test-project, --release, 1.0, --name, test_project/test-project/1.0 scan, /Users/gsnyder/Projects/wf-scanning-solution/test_project], fileUriSet=[file://gsnyder-mac/Users/gsnyder/Projects/wf-scanning-solution/test_project], dryRunWriteDir=No dry run file., dryRunReadFile=No dry run file., snippetMatching=false, snippetMatchingOnly=false, snippetMatchingAllSource=false, fullSnippetScan=false, uploadSource=false, individualFileMatching=none, licenseSearch=false, logDir=/Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1, scheme=https, host=ec2-18-217-189-8.us-east-2.compute.amazonaws.com, port=443, name=Optional[test_project/test-project/1.0 scan], project=Optional[test-project], release=Optional[1.0], username=null, password=<NOT SHOWN>]...
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Initialize client for ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = {scanId}, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/v1/scans
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = {scanId}, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/scan-summaries
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = {scanId}, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/v1/scanstatus
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/v1/scans/signatureVersion
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/internal/scans/{scanId}/scan-candidates?scanCandidatesParam={scanCandidatesParam}&limit={limit}&offset={offset}
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/fp-import/scans/{scanId}
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/projects?q=name:{projname}&limit={limit}&offset={offset}
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/scan-sources/{sha1}
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/bulk-sources
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/internal/scans/{scanId}/uploaded-file-data
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/internal/scans/{scanId}/license-search-matches
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: RestResourceClient created. SingleRelativePath = null, URI = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com:443/api/internal/scans/{scanId}/string-search
+2020-05-05 14:05:15 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Execute scan file://gsnyder-mac/Users/gsnyder/Projects/wf-scanning-solution/test_project....
+2020-05-05 14:05:16 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Scan engine initialized with niceness set to false
+2020-05-05 14:05:18 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Total time: 1 seconds to scan path: /Users/gsnyder/Projects/wf-scanning-solution/test_project
+2020-05-05 14:05:18 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Post Scan...
+2020-05-05 14:05:19 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: ScanExecResult: ScanExecResult [scanClientSettings=ScanClientSettings [commandLine=[--no-prompt, --scheme, https, --host, ec2-18-217-189-8.us-east-2.compute.amazonaws.com, --port, 443, --insecure, -v, --logDir, /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1, --statusWriteDir, /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1, --project, test-project, --release, 1.0, --name, test_project/test-project/1.0 scan, /Users/gsnyder/Projects/wf-scanning-solution/test_project], fileUriSet=[file://gsnyder-mac/Users/gsnyder/Projects/wf-scanning-solution/test_project], dryRunWriteDir=No dry run file., dryRunReadFile=No dry run file., snippetMatching=false, snippetMatchingOnly=false, snippetMatchingAllSource=false, fullSnippetScan=false, uploadSource=false, individualFileMatching=none, licenseSearch=false, logDir=/Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1, scheme=https, host=ec2-18-217-189-8.us-east-2.compute.amazonaws.com, port=443, name=Optional[test_project/test-project/1.0 scan], project=Optional[test-project], release=Optional[1.0], username=null, password=<NOT SHOWN>], result=0, dataFileName=null, scanContainer=ScanContainerView{scanId=09bac760-b344-44f7-8773-13263ae6af9b, createdOn=2020-05-05T18:05:15.989Z, timeToScan=1394, scannerVersion=2020.4.0, signatureVersion=7.0.0, hostName=gsnyder-mac, ownerEntityKeyToken=SN#gsnyder-mac-test_project, baseDir=/Users/gsnyder/Projects/wf-scanning-solution/test_project, name=Optional[test_project/test-project/1.0 scan], project=Optional[test-project], release=Optional[1.0], scanProblem=null, scanProblemList.size()=0, scanNodeList.size()=2458}, fpScanContainer=null, stringSearchScanContainer=null, scanResult=ScanView{id=09bac760-b344-44f7-8773-13263ae6af9b, scannerVersion=2020.4.0, signatureVersion=7.0.0, name=test_project/test-project/1.0 scan, hostName=gsnyder-mac, ownerEntityKeyToken=SN#09bac760-b344-44f7-8773-13263ae6af9b, baseDir=/, createdOn=2020-05-05T18:05:15.989Z, lastModifiedOn=2020-05-05T18:05:18.953Z, timeToScan=0, createdByUserId=00000000-0000-0000-0001-000000000001, matchCount=0, numDirs=0, numNonDirFiles=0, status=ERROR, statusMessage=the current context does not support: https://blackducksoftware.github.io/bdio#hasPath, deepSystemSize=Optional.empty, scanSourceType=SN, scanSourceId=09bac760-b344-44f7-8773-13263ae6af9b, timeLastModified=1588701918953, timeToPersistMs=0, scanTime=1588701915989, arguments={managedCodebaseSize=8233260, managedCodeBaseLimit=9223372036854775807, codeLocationBytesLimit=112742891520, managedCodeBaseSoftLimit=9223372036854775807}}, scanSummary=ScanSummaryView{status=ERROR, statusMessage=the current context does not support: https://blackducksoftware.github.io/bdio#hasPath, createdAt=2020-05-05T18:05:15.989Z, updatedAt=2020-05-05T18:05:18.953Z, createdByUserName=Optional.empty, scanSize=Optional.empty, serverVersion=2020.4.0, matchCount=0, baseDirectory=/, hostName=gsnyder-mac, scanType=FS, resourceMetadata=ResourceMetadata{allow=[GET], href=https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com/api/scan-summaries/09bac760-b344-44f7-8773-13263ae6af9b, links=[ResourceLink{rel=codelocation, href=https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com/api/codelocations/c83511c2-40e9-3346-9220-809b9e0942ff}]}}, scanDate=Tue May 05 14:05:15 EDT 2020, scanEndDate=Tue May 05 14:05:19 EDT 2020, scanCreated=true]
+2020-05-05 14:05:19 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Creating data output file: /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1/log/gsnyder-mac-test_project-2020-05-05T180515.989Z.log
+2020-05-05 14:05:19 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Logging to file: 
+Logging to file: /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1/log/gsnyder-mac-test_project-2020-05-05T180515.989Z.log
+2020-05-05 14:05:19 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Creating data output file: /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1/status/gsnyder-mac-test_project-2020-05-05T180515.989Z.json
+2020-05-05 14:05:19 DEBUG [pool-3-thread-1-Stream Redirect Thread] --- INFO: Persist ScanSummary to file...
+2020-05-05 14:05:19 DEBUG [pool-3-thread-1] --- INFO: Persisted status: /Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1/status/gsnyder-mac-test_project-2020-05-05T180515.989Z.json
+2020-05-05 14:05:19 INFO  [pool-3-thread-1] --- 
+2020-05-05 14:05:19 INFO  [pool-3-thread-1] --- Black Duck Signature Scanner return code: 0
+2020-05-05 14:05:19 INFO  [pool-3-thread-1] --- You can view the logs at: '/Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1'
+2020-05-05 14:05:19 INFO  [main] --- Completed the Black Duck Signature Scan commands.
+2020-05-05 14:05:19 INFO  [main] --- /Users/gsnyder/Projects/wf-scanning-solution/test_project was successfully scanned by the BlackDuck CLI.
+2020-05-05 14:05:19 INFO  [main] --- Signature scanner actions finished.
+2020-05-05 14:05:19 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:19 INFO  [main] --- Will include the binary scanner tool.
+2020-05-05 14:05:19 INFO  [main] --- Binary scanner actions finished.
+2020-05-05 14:05:19 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:19 INFO  [main] --- Will perform Black Duck post actions.
+2020-05-05 14:05:19 INFO  [main] --- Black Duck actions have finished.
+2020-05-05 14:05:19 INFO  [main] --- All tools have finished.
+2020-05-05 14:05:19 INFO  [main] --- ----------------------------------
+2020-05-05 14:05:19 DEBUG [main] --- Detect run completed.
+2020-05-05 14:05:19 INFO  [main] --- Creating status file: /Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/status/status.json
+2020-05-05 14:05:19 DEBUG [main] --- Detect shutdown begin.
+2020-05-05 14:05:19 DEBUG [main] --- Ending phone home.
+2020-05-05 14:05:19 INFO  [main] --- Skipping cleanup, it is disabled.
+2020-05-05 14:05:19 DEBUG [main] --- Detect shutdown completed.
+2020-05-05 14:05:19 DEBUG [main] --- All Detect actions completed.
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- ======== Detect Result ========
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- Black Duck Project BOM: https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com/api/projects/b0ff5779-4b4f-4ee6-ad81-c722544b1776/versions/2abe2ab8-c788-4f98-9447-89263055a98d/components
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- ======== Detect Status ========
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- MAVEN: SUCCESS
+2020-05-05 14:05:19 INFO  [main] --- PIP: SUCCESS
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- Scan Target /Users/gsnyder/Projects/wf-scanning-solution/test_project: SUCCESS
+2020-05-05 14:05:19 INFO  [main] --- Overall Status: SUCCESS
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- ===============================
+2020-05-05 14:05:19 INFO  [main] --- 
+2020-05-05 14:05:19 INFO  [main] --- Detect duration: 00h 00m 14s 430ms
+
+Scan files generated:
+/Users/gsnyder/Projects/wf-scanning-solution/scan-output-dir/BlackDuckScanOutput/2020-05-05_18-05-13-529_1/status/gsnyder-mac-test_project-2020-05-05T180515.989Z.json
+
+BOM files generated:
+/Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/bdio/test_project_1_0_my_app_com_mycompany_app_my_app_1_0_maven_bom.jsonld
+/Users/gsnyder/Projects/wf-scanning-solution/output-dir/runs/2020-05-05-18-05-04-802/bdio/test_project_1_0__Users_gsnyder_Projects_wf_scanning_solution_test_project_pip_bom.jsonld

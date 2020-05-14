@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+  <title>ourfaces tree example 5</title>
+  <link rel="stylesheet" type="text/css" href="ourfaces.css">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a class="white" href="../platform/main.html"> Components </a> - <a
+ class="white" href="tree_overview.html"> Tree </a> - Navigation Panel
+</h2>
+<h3>Navigation Panel <br>
+</h3>
+<span style="color: rgb(0, 0, 0);">For navigation in trees a
+navigation panel</span> <span style="color: rgb(0, 0, 0);">can be
+assigned to a tree.</span><br>
+<br>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left;">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">...<br>&lt;table&gt; <br>    &lt;tr&gt;<br>        &lt;td colspan="4"&gt;<br>             &lt;h:outputText id="locateInput" value="#{treeNavigationActions.searchResultString}"/&gt;<br>        &lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt; <br>       &lt;h:form&gt;<br>            &lt;ourfaces:set var="#{treeNavigationActions.affectedUITreeId}" value="treeForm:tree5"/&gt; <br>       &lt;th class="sub"&gt; <br>            &lt;h:commandButton type="image" image="/images/reload3.gif"  action="#{TreeBean.initializeTreeModelForExample5Action}"  title="reload"/&gt;<br>        &lt;/th&gt;<br>        &lt;th class="sub"&gt;<br>            &lt;h:commandButton type="image" image="/images/search.gif"  action="#{treeNavigationActions.searchAction}" title="search for nodes"   /&gt;<br>            &lt;h:inputText id="locateInput" value="#{treeNavigationActions.search}"  /&gt;<br>        &lt;/th&gt;<br>        &lt;th class="sub"&gt;<br>            &lt;h:commandButton type="image" image="/images/expand.gif"    action="#{treeNavigationActions.expandAction}"  title="expand the selected node" /&gt;<br>            &lt;h:commandButton type="image" image="/images/collapse.gif"  action="#{treeNavigationActions.collapsAction}"  title="collaps the selected node"/&gt;<br>        &lt;/th&gt;<br>      &lt;/h:form&gt;<br>    &lt;/tr&gt;<br>&lt;/table&gt;<br>&lt;h:form&gt;<br>    &lt;ourfaces:tree id="tree5" binding="#{TreeBean.UITree5}"/&gt;<br>&lt;/h:form&gt;<br>...<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td
+ style="background-color: rgb(255, 255, 204); text-align: center; vertical-align: middle;">
+      <table cellpadding="0" cellspacing="0" border="0"
+ style="text-align: left; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ style="border: 0px solid ; height: 171px; width: 271px;" alt=""
+ src="../skin/default/tree/example5.gif"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example5.jsp"><img align="middle" title=""
+ style="border: 0px solid ; height: 24px; width: 24px;" alt=""
+ src="../skin/default/tree/execute.gif"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<span style="color: rgb(0, 0, 0);">There navigation panel is build with
+three JavaServer Faces standard </span><code>&lt;h:commandButton/&gt; </code>tags<span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;">, a
+JSF </span></span><code>&lt;h:inputText/&gt; </code><span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;">tag
+and an ourfaces</span></span><code> &lt;o:set/&gt;</code><span
+ style="color: rgb(0, 0, 0);"><span style="font-family: monospace;">
+tag and a bean called </span></span><code>TreeNavigationActions.
+</code><span style="color: rgb(0, 0, 0);"><br>
+</span>
+<p></p>
+<p><span style="color: rgb(0, 0, 0);">To assign the navigation panel to
+a tree, set the property </span><code>affectedUITreeId</code><span
+ style="color: rgb(0, 0, 0);"> from </span><code>TreeNavigationActions</code><span
+ style="color: rgb(0, 0, 0);"> to the id attribute from the </span><code>&lt;ourfaces:tree/&gt;
+</code><span style="color: rgb(0, 0, 0);">tag.</span><span
+ style="color: rgb(0, 0, 0);"><br>
+</span></p>
+<p><span style="color: rgb(0, 0, 0);">This navigation panel uses</span><span
+ style="color: rgb(0, 0, 0);"> four </span><code>Actions </code><span
+ style="color: rgb(0, 0, 0);">from the </span><code>TreeBean:</code>
+</p>
+<ul>
+  <li><code><img src="images/reload.gif" alt=""
+ style="width: 24px; height: 26px;"> reloadAction </code><code>Action </code><span
+ style="color: rgb(0, 0, 0);">for reloading the tree<br>
+    </span></li>
+  <li><code><img src="images/search.gif" alt=""
+ style="width: 24px; height: 26px;"> searchAction </code><code>Action </code><span
+ style="color: rgb(0, 0, 0);">for searching node names in the tree. To
+search for name parts, use the wildcard "%"<br>
+    </span></li>
+  <li><code><img src="images/expand.gif" alt=""
+ style="width: 24px; height: 26px;"> expandAction </code><code>Action </code>for
+expanding a selected node in the tree. </li>
+  <li><code><img src="images/collaps.gif" alt=""
+ style="width: 24px; height: 26px;"> collapsAction </code><code>Action
+    </code>for
+collapsing a selected node in the tree.</li>
+</ul>
+<span style="color: rgb(0, 0, 0);"><span style="font-family: monospace;"></span></span><span
+ style="font-family: arial,sans-serif,helvetica;"><br>
+<br>
+</span><span style="font-family: arial,sans-serif,helvetica;"><br>
+<br>
+</span>
+</body>
+</html>

@@ -1,0 +1,166 @@
+body, h1, h2, h3, td, th, p, a {
+ color:rgb(41,20,115);
+ font-family:arial, sans-serif, helvetica;
+ font-size:10pt;
+}
+
+body { 
+  color:black;
+}
+
+
+h1 { 
+  font-size:20pt; 
+  color:rgb(49,48,49);
+}
+
+h2 { 
+  font-size:12pt; 
+  background-color:rgb(90,77,189);
+  color:white;
+  border-color:rgb(90,77,189);
+  border-width:2px; 
+  border-style:solid;
+}
+
+h3 { 
+  font-size:12pt; 
+  background-color:white; 
+
+}
+
+a { font-weight: bold }
+a:visited { color: rgb(102,102,153)}
+a:active {color: rgb(255,0,0)}
+a.pic{  background-color: rgb(90,77,189);  }
+a:hover { text-decoration: underline;  }
+
+
+a.white:link { text-decoration: none;
+               font-size: 12pt; 
+               color: white;  }
+a.white:visited { text-decoration: none;   
+               font-size: 12pt; 
+               color: white;  }
+a.white:active { text-decoration: none; 
+               font-size: 12pt; 
+               color: white;  }
+a.white:hover { text-decoration: underline;  
+               font-size: 12pt; 
+               color: white;  }
+
+
+pre {
+  background-color:rgb(255,255,190); 
+  color:rgb(51,51,102); 
+  font-family:Fixedsys,Courier; 
+  padding:15px;
+
+}
+
+
+.tree {
+    color: rgb(41,20,115);
+    font-family: arial, sans-serif, helvetica;
+    font-size: 10pt;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.treeSelected {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.found {
+    color: red;
+}
+
+
+
+
+th {
+ color:white;
+ background-color:rgb(51,51,102);
+ font-weight:bold;
+}
+
+th.sub {
+ color:color:rgb(51,51,102);
+ background-color:rgb(255,255,190);
+}
+
+th.error {
+ color:red;
+ background-color:white;
+ font-weight:bold;
+}
+
+
+th.data-selected {
+ color:#ffcc66;
+ background-color:rgb(51,51,102);
+}
+
+th.mandatory {
+ font-style:italic
+}
+
+td.data {
+ color:rgb(51,51,102);
+}
+
+td.data-selected {
+ color:rgb(51,51,102);
+ background-color:#ffcc66;
+}
+
+td.data-focus {
+ color:rgb(51,51,102);
+ background-color:#ff9933;
+}
+
+td.data-deleted {
+ color:rgb(51,51,102);
+ background-color:#CCCCCC;
+}
+
+td.data-changed {
+ color:rgb(51,51,102);
+ background-color:#CCCCCC;
+}
+
+td.version-changed {
+ color:rgb(51,51,102);
+ background-color:#ff9933;
+}
+
+td.data-collection {
+ color:rgb(51,51,102);
+ background-color:#F3F3F3;
+}
+
+td.data-error {
+ color:rgb(51,51,102);
+ background-color:#FF9999;
+}
+
+td.label {
+ background-color:rgb(222,223,222);
+ font-weight:bold;
+ text-align:right;
+}
+
+td.label-mandatory {
+ background-color:rgb(222,223,222);
+ font-weight:bold;
+ text-align:right;
+ font-style:italic
+}
+
+td.error {
+ color:red;
+ background-color:white;
+ font-weight:bold;
+}
+

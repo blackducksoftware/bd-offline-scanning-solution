@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=iso-8859-1" http-equiv="content-type">
+  <title>ourfaces tree example 6</title>
+  <link href="../ourfaces.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a href="../platform/main.html" class="white"> Components </a> - <a
+ href="tree_overview.html" class="white"> Tree </a> - Navigation Panel
+to Set
+Highest Visible Node
+</h2>
+<span style="color: rgb(0, 0, 0);">For navigation in bigger trees
+you can add node set functions to the navigation panel</span><span
+ style="color: rgb(0, 0, 0);">.</span><br>
+<br>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left;">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">&lt;f:view&gt;<br>...<br>&lt;o:stylesheet path="/tree/tree-control.css"/&gt;   <br>&lt;h:form id="navigationForm"&gt;<br>    &lt;table&gt; <br>        &lt;tr&gt; <br>            &lt;o:set var="#{treeNavigationActions.affectedUITreeId}" value="treeForm:tree6"/&gt; <br>            &lt;th class="sub"&gt; <br>                &lt;h:commandButton type="image" image="/images/reload3.gif" action="#{TreeBean.initializeTreeModelForExample5Action}"  title="reload/initialize"/&gt;<br>            &lt;/th&gt;<br>            &lt;th class="sub"&gt;<br>                &lt;h:commandButton type="image" image="/images/selectedHighest.gif" action="#{treeNavigationActions.highestNodeAction}"  title="set selected node to highest visible node"/&gt;<br>                &lt;h:commandButton type="image" image="/images/parentHighest.gif" action="#{treeNavigationActions.parentNodeAction}"  title ="set parent node to highest visible node"/&gt;<br>                &lt;h:commandButton type="image" image="/images/rootHighest.gif" action="#{treeNavigationActions.rootNodeAction}"  title ="set root node to highest visible node"/&gt;<br>            &lt;/th&gt;<br>            &lt;th class="sub"&gt;<br>                &lt;h:inputText id="search" value="#{treeNavigationActions.search}"  /&gt;<br>                &lt;h:commandButton type="image" image="/images/search.gif"  id="locate"  action="#{treeNavigationActions.searchAction}"  title="search for nodes"   /&gt;<br>            &lt;/th&gt;<br>            &lt;th class="sub"&gt;<br>                &lt;h:commandButton type="image" image="/images/expand.gif"    id="expand"  action="#{treeNavigationActions.expandAction}"   title="expand the selected node" /&gt;<br>                &lt;h:commandButton type="image" image="/images/collapse.gif"  action="#{treeNavigationActions.collapsAction}"  title="collaps the selected node"/&gt;<br>            &lt;/th&gt;<br>        &lt;/tr&gt;<br>        &lt;tr&gt;<br>            &lt;td colspan="4"&gt;<br>                &lt;h:outputText id="locateInput" value="#{treeNavigationActions.searchResultString}"  /&gt;<br>            &lt;/td&gt;<br>        &lt;/tr&gt;<br>    &lt;/table&gt;<br>&lt;/h:form&gt;<br>&lt;h:form  id="treeForm"&gt;<br>    &lt;o:tree id="tree6"  binding="#{TreeBean.UITree5}"/&gt;<br>&lt;/h:form&gt;<br>...<br>&lt;/f:view&gt;<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td
+ style="background-color: rgb(255, 255, 204); text-align: center; vertical-align: middle;">
+      <table cellpadding="0" cellspacing="0" border="0"
+ style="text-align: left; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ style="border: 0px solid ; height: 138px; width: 349px;" alt=""
+ src="../skin/default/tree/example6.gif"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example6.jsp"><img align="middle" title=""
+ style="border: 0px solid ; height: 24px; width: 24px;" alt=""
+ src="../skin/default/tree/execute.gif"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+The navigation panel
+has the following three node set functions:<br>
+<ul>
+  <li><code><img src="../skin/default/tree/highest.gif" alt=""
+ style="width: 24px; height: 26px;"> highestNodeAction </code><code></code><span
+ style="color: rgb(0, 0, 0);">This </span><code> </code><code>Action </code><span
+ style="color: rgb(0, 0, 0);">sets the selected node as highest visible
+node in the tree.<br>
+    </span></li>
+  <li><code><img src="../skin/default/tree/parent.gif" alt=""
+ style="width: 24px; height: 26px;"> parentNodeAction </code><span
+ style="color: rgb(0, 0, 0);">This </span><code> </code><code>Action <span
+ style="font-family: arial,sans-serif,helvetica;">replaces </span></code><span
+ style="color: rgb(0, 0, 0);">the highest visible node with it's parent
+node</span> </li>
+  <li><code><img src="../skin/default/tree/root.gif" alt=""
+ style="width: 24px; height: 26px;"> rootNodeAction </code><span
+ style="color: rgb(0, 0, 0);">This </span><code> </code><code>Action <span
+ style="font-family: arial,sans-serif,helvetica;">replaces </span></code><span
+ style="color: rgb(0, 0, 0);">the highest visible node with the root
+node.<br>
+    </span></li>
+</ul>
+<br>
+</body>
+</html>

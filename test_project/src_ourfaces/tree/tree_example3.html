@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+  <title>ourfaces tree example 3</title>
+  <link rel="stylesheet" type="text/css" href="../ourfaces.css">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a class="white" href="../platform/main.html"> Components </a> - <a
+ class="white" href="tree_overview.html"> Tree </a> - Different Node
+Types
+</h2>
+<br>
+<span style="color: rgb(0, 0, 0);">A user can define the look of
+nodes by defining and asigning node type.</span><br>
+<br>
+<table style="text-align: left;" border="1" cellspacing="2"
+ cellpadding="2">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">&lt;%@ taglib uri="http://java.sun.com/jsf/core"   prefix="f" %&gt;<br>&lt;%@ taglib uri="http://java.sun.com/jsf/html"   prefix="h" %&gt;<br>&lt;%@ taglib uri="http://ourfaces.dev.sun.net/components" prefix="o" %&gt; <br><br>&lt;f:view&gt;<br>    &lt;html&gt;<br>        &lt;head&gt;<br>            &lt;title&gt;small static tree with different node types&lt;/title&gt;<br>        &lt;/head&gt;<br>        &lt;body&gt;<br>            &lt;h1&gt;Different Node Types&lt;/h1&gt;<br>            &lt;o:stylesheet path="/tree/tree-control.css"/&gt;        <br>            &lt;h:form&gt;<br>                &lt;o:tree&gt;<br>                    &lt;o:treeNodeType name="nodeType1" cssClass="tree" selectedCssClass="treeSelected" foundCssClass="found" icon="Users.gif"/&gt;<br>                    &lt;o:treeNodeType name="nodeType2" cssClass="tree" selectedCssClass="treeSelected" foundCssClass="found" icon="Groups.gif"/&gt;<br>                    &lt;o:treeNodeType name="nodeType3" cssClass="tree" selectedCssClass="treeSelected" foundCssClass="found" icon="Roles.gif"/&gt;<br>                    &lt;o:treeNode name="root" label="node types" &gt;<br>                        &lt;o:treeNode name="1" label="node type 1" treeNodeType="nodeType1"/&gt;<br>                        &lt;o:treeNode name="2" label="node type 2" treeNodeType="nodeType2"/&gt;<br>                        &lt;o:treeNode name="3" label="node type 3" treeNodeType="nodeType3"/&gt;                          <br>                    &lt;/o:treeNode&gt;<br>                &lt;/o:tree&gt;<br>            &lt;/h:form&gt;<br>        &lt;/body&gt;<br>    &lt;/html&gt;<br>&lt;/f:view&gt;<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td
+ style="background-color: rgb(255, 255, 204); text-align: center; vertical-align: middle;">
+      <table style="text-align: left; width: 100%;" border="0"
+ cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img border="0" width="178"
+ height="106" alt="" src="../skin/default/tree/example3.gif"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example3.jsp"><img align="middle" title=""
+ style="border: 0px solid ; height: 24px; width: 24px;" alt=""
+ src="../skin/default/tree/execute.gif"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<span style="color: rgb(0, 0, 0);">The look of&nbsp; a node is
+separated
+from it's content. A user can generate a&nbsp; new type for one ore
+more tree nodes
+by using the </span><code>&lt;ourfaces:treeNodeType/&gt; </code><code></code><span
+ style="color: rgb(0, 0, 0);">tag</span><code>. </code><span
+ style="color: rgb(0, 0, 0);">The generated type is identified by the
+atttribute </span><code>name</code><span style="color: rgb(0, 0, 0);">.&nbsp;
+To link a
+type to a node use the </span><code>treeNodeType <span
+ style="font-family: arial,sans-serif,helvetica; color: rgb(0, 0, 0);">attribute
+from the </span></code><code>&lt;ourfaces:treeNode&gt; <span
+ style="font-family: arial,sans-serif,helvetica;"><span
+ style="color: rgb(0, 0, 0);">tag. If no type is assigned to a node, a
+default type will be used.<br>
+<span style="font-weight: bold;"><br>
+Note: </span>If the tree obtains data from model, the</span></span></code><span
+ style="color: rgb(0, 0, 0);"> body of the </span><code>&lt;ourfaces:tree&gt;
+</code><span style="color: rgb(0, 0, 0);">tag will be ignored.
+Therefore it is not possible to generate types by using the </span><code>&lt;ourfaces:treeNodeType&gt;
+</code><code></code><span style="color: rgb(0, 0, 0);">tag. The type
+has to be defined in the model.</span><code></code><span
+ style="font-family: arial,sans-serif,helvetica;"><br>
+<br>
+</span>
+</body>
+</html>

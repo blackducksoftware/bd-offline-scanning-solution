@@ -1,0 +1,327 @@
+Cleaning output directory /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0
+Cleaning output directory /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0
+______     _            _
+|  _  \   | |          | |
+| | | |___| |_ ___  ___| |_
+| | | / _ \ __/ _ \/ __| __|
+| |/ /  __/ ||  __/ (__| |_
+|___/ \___|\__\___|\___|\__|
+
+2020-05-14 16:44:34 DEBUG [main] --- Initializing detect.
+2020-05-14 16:44:34 DEBUG [main] --- You seem to be running in a MAC operating system.
+2020-05-14 16:44:34 DEBUG [main] --- Detect boot begin.
+
+Detect Version: 6.2.1
+
+2020-05-14 16:44:34 DEBUG [main] --- Configuration processed completely.
+2020-05-14 16:44:35 INFO  [main] --- 
+2020-05-14 16:44:35 INFO  [main] --- Current property values:
+2020-05-14 16:44:35 INFO  [main] --- --property = value [notes]
+2020-05-14 16:44:35 INFO  [main] --- ------------------------------------------------------------
+2020-05-14 16:44:35 INFO  [main] --- blackduck.api.token = **************************************************************************************************** [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- blackduck.offline.mode = true [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- blackduck.trust.cert = true [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- blackduck.url = https://ec2-18-217-189-8.us-east-2.compute.amazonaws.com [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.blackduck.signature.scanner.individual.file.matching = ALL [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.blackduck.signature.scanner.local.path = /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.cleanup = false [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.code.location.name = test-project-1.0 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.detector.search.depth = 3 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.npm.include.dev.dependencies = false [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.output.path = /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.parallel.processors = -1 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.project.name = test-project [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.project.version.name = 1.0 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- detect.scan.output.path = /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0 [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- logging.level.detect = DEBUG [cmd] 
+2020-05-14 16:44:35 INFO  [main] --- ------------------------------------------------------------
+2020-05-14 16:44:35 INFO  [main] --- 
+2020-05-14 16:44:35 DEBUG [main] --- Initializing Detect.
+2020-05-14 16:44:35 INFO  [main] --- Tilde's will be automatically resolved to USER HOME.
+2020-05-14 16:44:35 INFO  [main] --- Source directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:35 INFO  [main] --- Output directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0
+2020-05-14 16:44:35 INFO  [main] --- Run directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0/runs/2020-05-14-20-44-34-521
+2020-05-14 16:44:35 DEBUG [main] --- Main boot completed. Deciding what Detect should do.
+2020-05-14 16:44:35 INFO  [main] --- 
+2020-05-14 16:44:35 DEBUG [main] --- Black Duck will run: Black Duck offline mode was set to true.
+2020-05-14 16:44:35 DEBUG [main] --- Polaris will NOT run: The Polaris url must be provided.
+2020-05-14 16:44:35 DEBUG [main] --- Decided what products will be run. Starting product boot.
+2020-05-14 16:44:35 DEBUG [main] --- Detect product boot start.
+2020-05-14 16:44:35 DEBUG [main] --- Will boot Black Duck product.
+2020-05-14 16:44:35 DEBUG [main] --- Detect product boot completed.
+2020-05-14 16:44:35 DEBUG [main] --- Guessed Detect jar location as /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/synopsys-detect-6.2.1.jar
+2020-05-14 16:44:35 DEBUG [main] --- Checking for jar file: /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/synopsys-detect-6.2.1.jar
+2020-05-14 16:44:35 DEBUG [main] --- Found detect jar file.
+2020-05-14 16:44:35 DEBUG [main] --- Detect boot completed.
+2020-05-14 16:44:35 DEBUG [main] --- Detect will attempt to run.
+2020-05-14 16:44:35 DEBUG [main] --- Detect run begin: 2020-05-14-20-44-34-521
+2020-05-14 16:44:35 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:35 INFO  [main] --- Polaris tools will not be run.
+2020-05-14 16:44:35 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:35 INFO  [main] --- Will include the Docker tool.
+2020-05-14 16:44:35 INFO  [main] --- Was not applicable.
+2020-05-14 16:44:35 INFO  [main] --- Docker actions finished.
+2020-05-14 16:44:35 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:35 INFO  [main] --- Will include the Bazel tool.
+2020-05-14 16:44:35 INFO  [main] --- Was not applicable.
+2020-05-14 16:44:35 INFO  [main] --- Bazel actions finished.
+2020-05-14 16:44:35 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:35 INFO  [main] --- Will include the detector tool.
+2020-05-14 16:44:35 DEBUG [main] --- Initializing detector system.
+2020-05-14 16:44:35 DEBUG [main] --- Starting detector file system traversal.
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/tools
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/db-charmer
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/db-charmer/kovyrin-db-charmer-28c8115
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/db-charmer/kovyrin-db-charmer-28c8115/lib
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/licenses
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_jo
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_jo/util
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_jo/io
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/MercurialToolbar
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/yet-another-maven-project
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/RuneKit
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/lib
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/petris
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/petris/gitpan-petris-08e5dc8
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL/times
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL/times/091
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL/times/090
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL/certs
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL/certs/expired
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/OpenSSL/set
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_pgsl
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/apache-ant
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/apache-ant/lib
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_ourfaces
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_ourfaces/tree
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_ourfaces/code
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_ourfaces/code/catalog
+2020-05-14 16:44:35 DEBUG [main] --- Traversing directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/src_ourfaces/code/taglibrary
+2020-05-14 16:44:35 INFO  [main] --- Searching for detectors. This may take a while.
+2020-05-14 16:44:35 DEBUG [main] --- Found (1) applicable detectors in: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:35 DEBUG [main] --- Found (1) applicable detectors in: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app
+2020-05-14 16:44:35 DEBUG [main] --- 
+2020-05-14 16:44:35 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:35 DEBUG [main] --- Search results
+2020-05-14 16:44:35 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:35 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:35 DEBUG [main] --- 	APPLIES: MAVEN - Maven Pom
+2020-05-14 16:44:35 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app
+2020-05-14 16:44:35 DEBUG [main] --- 	APPLIES: NPM - Package Lock
+2020-05-14 16:44:35 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:35 DEBUG [main] --- 
+2020-05-14 16:44:35 INFO  [main] --- 
+2020-05-14 16:44:35 DEBUG [main] --- Starting detector preparation.
+2020-05-14 16:44:35 DEBUG [main] --- 
+2020-05-14 16:44:35 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:35 DEBUG [main] --- Preparation for extraction
+2020-05-14 16:44:35 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:35 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:35 DEBUG [main] --- 	    READY: MAVEN - Maven Pom
+2020-05-14 16:44:35 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app
+2020-05-14 16:44:35 DEBUG [main] --- 	    READY: NPM - Package Lock
+2020-05-14 16:44:35 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:35 DEBUG [main] --- 
+2020-05-14 16:44:35 DEBUG [main] --- Preparing detectors for discovery and extraction.
+2020-05-14 16:44:35 DEBUG [main] --- Counting detectors that will be evaluated.
+2020-05-14 16:44:35 DEBUG [main] --- Total number of detectors: 2
+2020-05-14 16:44:35 DEBUG [main] --- Starting detector project discovery.
+2020-05-14 16:44:35 DEBUG [main] --- Discovery 1 of 2 (0%)
+2020-05-14 16:44:35 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:35 DEBUG [main] --- Starting discovery: MAVEN - Maven Pom
+2020-05-14 16:44:35 DEBUG [main] --- Identifier: MAVEN-0
+2020-05-14 16:44:35 DEBUG [main] --- mavenExe: /usr/local/bin/mvn
+2020-05-14 16:44:35 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:35 INFO  [main] --- Running executable >/usr/local/bin/mvn dependency:tree -T1
+2020-05-14 16:44:36 DEBUG [main-Executable_Stream_Thread] --- [INFO] Scanning for projects...
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] 
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] ----------------------< com.mycompany.app:my-app >----------------------
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] Building my-app 1.0
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] --------------------------------[ jar ]---------------------------------
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] 
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ my-app ---
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] com.mycompany.app:my-app:jar:1.0
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- junit:junit:jar:4.11:test
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- org.apache.struts:struts2-core:jar:2.5.8:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- org.freemarker:freemarker:jar:2.3.23:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- ognl:ognl:jar:3.1.12:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  |  \- org.javassist:javassist:jar:3.20.0-GA:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- org.apache.logging.log4j:log4j-api:jar:2.7:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- commons-fileupload:commons-fileupload:jar:1.3.2:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- commons-io:commons-io:jar:2.4:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  \- org.apache.commons:commons-lang3:jar:3.4:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] +- net.sourceforge.jwebunit:jwebunit-core:jar:1.4.1:test
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  +- regexp:regexp:jar:1.3:test
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] |  \- javax.servlet:servlet-api:jar:2.4:test
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] \- org.apache.logging.log4j:log4j-core:jar:2.11.1:compile
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] ------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] BUILD SUCCESS
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] ------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] Total time:  1.015 s
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] Finished at: 2020-05-14T16:44:37-04:00
+2020-05-14 16:44:37 DEBUG [main-Executable_Stream_Thread] --- [INFO] ------------------------------------------------------------------------
+2020-05-14 16:44:37 INFO  [main] --- Executable finished: 0
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Finished discovery: SUCCESS
+2020-05-14 16:44:37 DEBUG [main] --- Project information found: true
+2020-05-14 16:44:37 DEBUG [main] --- Project name found: my-app
+2020-05-14 16:44:37 DEBUG [main] --- Project version found: 1.0
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Discovery 2 of 2 (50%)
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Starting discovery: NPM - Package Lock
+2020-05-14 16:44:37 DEBUG [main] --- Identifier: NPM-1
+2020-05-14 16:44:37 DEBUG [main] --- lockfile: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app/package-lock.json
+2020-05-14 16:44:37 DEBUG [main] --- packageJson: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app/package.json
+2020-05-14 16:44:37 DEBUG [main] --- includeDevDependencies: false
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Project discovery already found information, this detector will be skipped.
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Finished discovery: SUCCESS
+2020-05-14 16:44:37 DEBUG [main] --- Project information found: false
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- 
+2020-05-14 16:44:37 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:37 DEBUG [main] --- Discovery results:
+2020-05-14 16:44:37 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:37 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:37 DEBUG [main] --- 	Project Information Discoveries: 1
+2020-05-14 16:44:37 DEBUG [main] --- 	Success: MAVEN - Maven Pom
+2020-05-14 16:44:37 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app
+2020-05-14 16:44:37 DEBUG [main] --- 	Project Information Discoveries: 1
+2020-05-14 16:44:37 DEBUG [main] --- 	Success: NPM - Package Lock
+2020-05-14 16:44:37 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:37 DEBUG [main] --- 
+2020-05-14 16:44:37 DEBUG [main] --- Starting detector extraction.
+2020-05-14 16:44:37 DEBUG [main] --- Extracting 1 of 2 (0%)
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Starting extraction: MAVEN - Maven Pom
+2020-05-14 16:44:37 DEBUG [main] --- Identifier: MAVEN-0
+2020-05-14 16:44:37 DEBUG [main] --- mavenExe: /usr/local/bin/mvn
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Extraction already completed during project discovery.
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Finished extraction: SUCCESS
+2020-05-14 16:44:37 DEBUG [main] --- Code locations found: 1
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Extracting 2 of 2 (50%)
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Starting extraction: NPM - Package Lock
+2020-05-14 16:44:37 DEBUG [main] --- Identifier: NPM-1
+2020-05-14 16:44:37 DEBUG [main] --- lockfile: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app/package-lock.json
+2020-05-14 16:44:37 DEBUG [main] --- packageJson: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app/package.json
+2020-05-14 16:44:37 DEBUG [main] --- includeDevDependencies: false
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Processing project.
+2020-05-14 16:44:37 DEBUG [main] --- Found 49 dependencies.
+2020-05-14 16:44:37 DEBUG [main] --- Finished processing.
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Finished extraction: SUCCESS
+2020-05-14 16:44:37 DEBUG [main] --- Code locations found: 1
+2020-05-14 16:44:37 DEBUG [main] --- ------------------------------------------------------------------------------------------------------
+2020-05-14 16:44:37 DEBUG [main] --- Finished detectors.
+2020-05-14 16:44:37 DEBUG [main] --- Publishing file events.
+2020-05-14 16:44:38 INFO  [main] --- 
+2020-05-14 16:44:38 DEBUG [main] --- Exactly one unique detector was found. Using MAVEN found at depth 0 as project info.
+2020-05-14 16:44:38 DEBUG [main] --- Finished running detectors.
+2020-05-14 16:44:38 INFO  [main] --- Detector actions finished.
+2020-05-14 16:44:38 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:38 DEBUG [main] --- Completed code location tools.
+2020-05-14 16:44:38 DEBUG [main] --- Determining project info.
+2020-05-14 16:44:38 DEBUG [main] --- Using the first ordered tool with project info: DETECTOR
+2020-05-14 16:44:38 INFO  [main] --- Project name: test-project
+2020-05-14 16:44:38 INFO  [main] --- Project version: 1.0
+2020-05-14 16:44:38 DEBUG [main] --- Black Duck tools will run.
+2020-05-14 16:44:38 DEBUG [main] --- Detect is not online, and will not create the project.
+2020-05-14 16:44:38 DEBUG [main] --- Completed project and version actions.
+2020-05-14 16:44:38 DEBUG [main] --- Processing Detect Code Locations.
+2020-05-14 16:44:38 DEBUG [main] --- Creating BDIO code locations.
+2020-05-14 16:44:38 DEBUG [main] --- 
+2020-05-14 16:44:38 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:38 DEBUG [main] --- Extraction results:
+2020-05-14 16:44:38 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:38 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:38 DEBUG [main] --- 	Code locations: 1
+2020-05-14 16:44:38 DEBUG [main] --- 	Success: MAVEN - Maven Pom
+2020-05-14 16:44:38 DEBUG [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project/my-node-app
+2020-05-14 16:44:38 DEBUG [main] --- 	Code locations: 1
+2020-05-14 16:44:38 DEBUG [main] --- 	Success: NPM - Package Lock
+2020-05-14 16:44:38 DEBUG [main] --- ======================================================================================================
+2020-05-14 16:44:38 DEBUG [main] --- 
+2020-05-14 16:44:38 DEBUG [main] --- Creating BDIO files from code locations.
+2020-05-14 16:44:38 DEBUG [main] --- BDIO Generated: /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0/runs/2020-05-14-20-44-34-521/bdio/test_project_1_0_maven_bom.jsonld
+2020-05-14 16:44:38 DEBUG [main] --- BDIO Generated: /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0/runs/2020-05-14-20-44-34-521/bdio/test_project_1_0_npm_bom.jsonld
+2020-05-14 16:44:38 INFO  [main] --- Created 2 BDIO files.
+2020-05-14 16:44:38 DEBUG [main] --- Completed Detect Code Location processing.
+2020-05-14 16:44:38 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:38 INFO  [main] --- Will include the signature scanner tool.
+2020-05-14 16:44:38 DEBUG [main] --- Determined offline local scanner path: /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0
+2020-05-14 16:44:38 DEBUG [main] --- Signature scanner either given an existing path for the scanner or is offline - either way, we won't attempt to manage the install.
+2020-05-14 16:44:38 DEBUG [main] --- Using provided path: /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0
+2020-05-14 16:44:38 DEBUG [main] --- Determined install directory: /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0
+2020-05-14 16:44:38 DEBUG [main] --- Signature scan is offline.
+2020-05-14 16:44:38 INFO  [main] --- No scan targets provided - registering the source path /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project to scan
+2020-05-14 16:44:38 INFO  [main] --- Starting the Black Duck Signature Scan commands.
+2020-05-14 16:44:38 DEBUG [pool-1-thread-1] --- The directory structure was likely created manually - be sure the jre folder exists in: /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0
+2020-05-14 16:44:38 DEBUG [pool-1-thread-1] --- Using this java installation : /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0/jre/Contents/Home/bin/java
+2020-05-14 16:44:38 INFO  [pool-1-thread-1] --- You have configured this signature scan to run in dry run mode - no results will be submitted to Black Duck.
+2020-05-14 16:44:38 INFO  [pool-1-thread-1] --- Black Duck CLI command: /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0/jre/Contents/Home/bin/java -Done-jar.silent=true -Done-jar.jar.path=/Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0/lib/cache/scan.cli.impl-standalone.jar -Xmx4096m -jar /Users/gsnyder/Projects/bd-offline-scanning-solution/detect_files/scan.cli-2020.4.0/lib/scan.cli-2020.4.0-standalone.jar --no-prompt --dryRunWriteDir /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1 -v --logDir /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1 --statusWriteDir /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1 --project test-project --release 1.0 --name test-project-1.0 scan --exclude /my-node-app/node_modules/ --individualFileMatching=ALL /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:38 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Start wrapper: ScanCliWrapperSettings [commandLine=org.apache.commons.cli.CommandLine@79defdc, fileUriSet=null, scheme=https, host=localhost, port=443]...
+2020-05-14 16:44:39 WARN  [pool-1-thread-1-Stream Redirect Thread] --- WARN: Unable to find manifest from all manifests.
+2020-05-14 16:44:39 WARN  [pool-1-thread-1-Stream Redirect Thread] --- WARN: Unable to find Hub manifest because the implementation title does not match [Implementation title: ScanCli].
+2020-05-14 16:44:39 WARN  [pool-1-thread-1-Stream Redirect Thread] --- WARN: No manifest found.
+2020-05-14 16:44:39 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Start scan loop: ScanClientSettings [commandLine=[--no-prompt, --dryRunWriteDir, /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, -v, --logDir, /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, --statusWriteDir, /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, --project, test-project, --release, 1.0, --name, test-project-1.0 scan, --exclude, /my-node-app/node_modules/, --individualFileMatching=ALL, /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project], fileUriSet=[file://gsnyder-mac/Users/gsnyder/Projects/bd-offline-scanning-solution/test_project], dryRunWriteDir=/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, dryRunReadFile=No dry run file., snippetMatching=false, snippetMatchingOnly=false, snippetMatchingAllSource=false, fullSnippetScan=false, uploadSource=false, individualFileMatching=all, licenseSearch=false, logDir=/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, scheme=https, host=localhost, port=443, name=Optional[test-project-1.0 scan], project=Optional[test-project], release=Optional[1.0], username=none, password=<NOT SHOWN>]...
+2020-05-14 16:44:39 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Execute scan file://gsnyder-mac/Users/gsnyder/Projects/bd-offline-scanning-solution/test_project....
+2020-05-14 16:44:39 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Scan engine initialized with niceness set to false
+2020-05-14 16:44:41 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Total time: 1 seconds to scan path: /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project
+2020-05-14 16:44:41 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Creating data output file: /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1/data/gsnyder-mac-test_project-2020-05-14T204439.492Z.json
+2020-05-14 16:44:41 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: ScanExecResult: ScanExecResult [scanClientSettings=ScanClientSettings [commandLine=[--no-prompt, --dryRunWriteDir, /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, -v, --logDir, /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, --statusWriteDir, /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, --project, test-project, --release, 1.0, --name, test-project-1.0 scan, --exclude, /my-node-app/node_modules/, --individualFileMatching=ALL, /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project], fileUriSet=[file://gsnyder-mac/Users/gsnyder/Projects/bd-offline-scanning-solution/test_project], dryRunWriteDir=/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, dryRunReadFile=No dry run file., snippetMatching=false, snippetMatchingOnly=false, snippetMatchingAllSource=false, fullSnippetScan=false, uploadSource=false, individualFileMatching=all, licenseSearch=false, logDir=/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1, scheme=https, host=localhost, port=443, name=Optional[test-project-1.0 scan], project=Optional[test-project], release=Optional[1.0], username=none, password=<NOT SHOWN>], result=0, dataFileName=/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1/data/gsnyder-mac-test_project-2020-05-14T204439.492Z.json, scanContainer=ScanContainerView{scanId=null, createdOn=2020-05-14T20:44:39.492Z, timeToScan=1552, scannerVersion=2020.4.0, signatureVersion=7.0.0, hostName=gsnyder-mac, ownerEntityKeyToken=SN#gsnyder-mac-test_project, baseDir=/Users/gsnyder/Projects/bd-offline-scanning-solution/test_project, name=Optional[test-project-1.0 scan], project=Optional[test-project], release=Optional[1.0], scanProblem=null, scanProblemList.size()=0, scanNodeList.size()=2464}, fpScanContainer=null, stringSearchScanContainer=null, scanResult=null, scanSummary=null, scanDate=Thu May 14 16:44:39 EDT 2020, scanEndDate=Thu May 14 16:44:41 EDT 2020, scanCreated=false]
+2020-05-14 16:44:41 DEBUG [pool-1-thread-1-Stream Redirect Thread] --- INFO: Creating data output file: /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1/log/gsnyder-mac-test_project-2020-05-14T204439.492Z.log
+2020-05-14 16:44:41 DEBUG [pool-1-thread-1] --- INFO: Logging to file: 
+Logging to file: /Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1/log/gsnyder-mac-test_project-2020-05-14T204439.492Z.log
+2020-05-14 16:44:41 INFO  [pool-1-thread-1] --- 
+2020-05-14 16:44:41 INFO  [pool-1-thread-1] --- Black Duck Signature Scanner return code: 0
+2020-05-14 16:44:41 INFO  [pool-1-thread-1] --- You can view the logs at: '/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1'
+2020-05-14 16:44:41 INFO  [main] --- Completed the Black Duck Signature Scan commands.
+2020-05-14 16:44:41 INFO  [main] --- /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project was successfully scanned by the BlackDuck CLI.
+2020-05-14 16:44:41 INFO  [main] --- Signature scanner actions finished.
+2020-05-14 16:44:41 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:41 INFO  [main] --- Will include the binary scanner tool.
+2020-05-14 16:44:41 INFO  [main] --- Binary scanner actions finished.
+2020-05-14 16:44:41 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:41 DEBUG [main] --- Will not perform Black Duck post actions: Detect is not online.
+2020-05-14 16:44:41 INFO  [main] --- All tools have finished.
+2020-05-14 16:44:41 INFO  [main] --- ----------------------------------
+2020-05-14 16:44:41 DEBUG [main] --- Detect run completed.
+2020-05-14 16:44:41 INFO  [main] --- Creating status file: /Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0/runs/2020-05-14-20-44-34-521/status/status.json
+2020-05-14 16:44:41 DEBUG [main] --- Detect shutdown begin.
+2020-05-14 16:44:41 INFO  [main] --- Skipping cleanup, it is disabled.
+2020-05-14 16:44:41 DEBUG [main] --- Detect shutdown completed.
+2020-05-14 16:44:41 DEBUG [main] --- All Detect actions completed.
+2020-05-14 16:44:41 INFO  [main] --- 
+2020-05-14 16:44:41 INFO  [main] --- 
+2020-05-14 16:44:41 INFO  [main] --- ======== Detect Status ========
+2020-05-14 16:44:41 INFO  [main] --- 
+2020-05-14 16:44:41 INFO  [main] --- MAVEN: SUCCESS
+2020-05-14 16:44:41 INFO  [main] --- NPM: SUCCESS
+2020-05-14 16:44:41 INFO  [main] --- 
+2020-05-14 16:44:41 INFO  [main] --- Scan Target /Users/gsnyder/Projects/bd-offline-scanning-solution/test_project: SUCCESS
+2020-05-14 16:44:41 INFO  [main] --- Overall Status: SUCCESS
+2020-05-14 16:44:41 INFO  [main] --- 
+2020-05-14 16:44:41 INFO  [main] --- ===============================
+2020-05-14 16:44:41 INFO  [main] --- 
+2020-05-14 16:44:41 INFO  [main] --- Detect duration: 00h 00m 06s 801ms
+
+Scan files generated:
+/Users/gsnyder/Projects/bd-offline-scanning-solution/scan-output-dir/v2020.4.0/BlackDuckScanOutput/2020-05-14_20-44-38-118_1/data/gsnyder-mac-test_project-2020-05-14T204439.492Z.json
+
+BOM files generated:
+/Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0/runs/2020-05-14-20-44-34-521/bdio/test_project_1_0_maven_bom.jsonld
+/Users/gsnyder/Projects/bd-offline-scanning-solution/output-dir/v2020.4.0/runs/2020-05-14-20-44-34-521/bdio/test_project_1_0_npm_bom.jsonld
+Cleaning directory v2020.4.0
+Copying scan files into v2020.4.0

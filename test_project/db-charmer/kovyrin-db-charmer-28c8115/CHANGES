@@ -1,0 +1,128 @@
+1.6.10 (2010-04-09):
+
+Multi-Db migrations changed. Now it is possible to call ActiveRecord::Migration.db_magic
+and specify default migration connection that would be used by all migrations without
+excplicitly switched connections.
+
+----------------------------------------------------------------------------------------
+1.6.9 (2010-04-08):
+
+Bugfix release: now DbCharmer works without Rails.
+
+----------------------------------------------------------------------------------------
+1.6.7 (2010-04-07):
+
+Changed the way we handle associations in on_db(:foo).find(:include) calls. Now we
+switch association's connection only if its default connection is the same as the
+master model's connection (not more "table does not exist" problems I hope).
+
+----------------------------------------------------------------------------------------
+1.6.5 (2010-04-05):
+
+Bugfix release: Fixed :connection vs :slave in db_magic behaviour. Model.on_master should
+run queries on the master, not on AR's default connection.
+
+----------------------------------------------------------------------------------------
+1.6.4 (2010-04-05):
+
+Default behaviour changed: DbCharmer.connections_should_exist is true in all environments
+by default. Old default behaviour was too misleading for many developers.
+
+----------------------------------------------------------------------------------------
+1.6.3 (2010-04-03):
+
+Bugfix release: Modified stub connection initialization code to set default connections
+for sharded models using shards enumeration or default shard features of sharding methods.
+
+----------------------------------------------------------------------------------------
+1.6.2 (2010-04-03):
+
+Bugfix release: Modified our stub connection used on sharded models to fail on db-calling
+methods only. Proxy the rest to a real shard connection. Another bug fixed in db_block_map
+sharding method: we didn't increment block counters when assigning blocks to shards.
+
+----------------------------------------------------------------------------------------
+1.6.1 (2010-03-31):
+
+Breaking change from now on all connection-switching methods (both in migrations and in
+models) are controlled by a single option DbCharmer.connections_should_exist. This
+option is false by default in all non-production environments. Check out README for
+more details.
+
+----------------------------------------------------------------------------------------
+1.6.0 (2010-03-31):
+
+The major (and arguably the only noticeable) change in this version is our simple database
+sharding support. The feature is still in alpha stage and should not be used in production
+without complete understanding of the principles of its work.
+
+----------------------------------------------------------------------------------------
+1.5.5 (2010-03-15):
+
+Thanks to ngmoco.com (http://github.com/ngmoco) now DbCharmer supports one more use-case
+for multi-db migrations. Now you can run the same migration on many databases at once.
+For example, the following migration would create test_table on all three shard databases:
+
+    class MultiDbTest < ActiveRecord::Migration
+      db_magic :connections => [ :shard01, :shard02, :shard03 ]
+
+      def self.up
+        create_table :test_table do |t|
+          t.string :test_string
+          t.timestamps
+        end
+      end
+
+      def self.down
+        drop_table :test_table
+      end
+    end
+
+----------------------------------------------------------------------------------------
+1.5.4 (2010-03-12):
+
+Added DbCharmer.with_remapped_databases, so that you can change the connection for
+many models simultaneously, and implicitly. Very useful for work where you want to use
+a particular slave for a whole range of database access.
+
+----------------------------------------------------------------------------------------
+1.5.3 (2010-03-10):
+
+Few changes:
+ * Colorized connection names in the logs for development mode
+ * We do not log connection names when connection does not exist
+
+----------------------------------------------------------------------------------------
+1.5.1 (2010-03-06):
+
+In this version we've added support for connection names logging in Rails queries log.
+New log records have [connection_name] prefix for all queries that are executed on
+non-standard connections:
+
+[logs]   LogRecord Columns (1.1ms)   SHOW FIELDS FROM `log_records`
+[logs]   User Delete all (0.1ms)   DELETE FROM `users`
+[slave01]   User Load (0.2ms)   SELECT * FROM `users` WHERE (`users`.`login` = 'foo')
+
+----------------------------------------------------------------------------------------
+1.4.6 -> 1.5.0 (2010-03-05):
+
+Major change in this version of DbCharmer is association preload support. For example,
+let's say we have a schema:
+
+    class Post < ActiveRecord::Base
+      belongs_to :user
+    end
+
+    class User < ActiveRecord::Base
+      has_many :posts
+    end
+
+Now, if we have the following call in our code:
+
+    User.on_db(:foo).all(:include => :posts)
+
+In 1.4.6 it would load the users from connection :foo and posts from the
+default connection, which is not what we would expect from this line of code.
+So, starting 1.5.0 all finder calls on models having :include parameter would
+switch associated models' connections to the same connection as the main model
+in the call.

@@ -1,0 +1,171 @@
+Petris
+
+1. SYNOPSIS
+2. REQUIREMENTS
+3. FILES
+4. INSTALLATION
+5. CHANGES
+6. COPYRIGHT
+7. NOTES
+
+
+1. SYNOPSIS
+
+Standard tetris clone with extra options.
+
+This is the classic version of tetris. It has some enhancements (which can be
+switched off), including patterns (layouts) of predetermined blocks already on
+the board, changeable board sizes, changeable speed and extra shapes. You can
+add new layouts and shapes easily.
+
+On-line help is provided - start up the game and click the Help button or press F1. 
+
+
+2. REQUIREMENTS
+
+Perl 5.004
+Tk 400.202
+Linux/X windows or Win32
+
+MesgBox.pm (available from wherever you got petris)
+
+The game was developed under Debian GNU/Linux 2.0.
+
+~60K disk space.
+
+
+3. FILES
+
+README
+debian-menu
+tk-text.pl
+petris
+petris-action.pl
+petris-board-commands.pl
+petris-board.pl
+petris-button-commands.pl
+petris-buttons.pl
+petris-consts.pl
+petris-help.pl
+petris-icon-16x16.xpm
+petris-keys.pl
+petris-layouts.pl
+petris-options.pl
+petris-opts.pl
+petris-shapes.pl
+
+Petris will create a directory in your home directory called '.games' and a
+file in that directory called 'petrisrc'. On Win32 machines it will create
+a file called 'PETRIS.INI' in the directory it is invoked from.
+
+
+4. INSTALLATION
+
+Note that Petris can be installed pretty well anywhere - the only restriction
+is that all the petris* files must be together in the same directory.
+
+# Create the directories.
+mkdir /usr/games
+mkdir /usr/games/petris
+
+# Copy the tar.gz to the game directory.
+cp petris-VERSION.tar.gz /usr/games
+
+# Change to the games directory.
+cd /usr/games
+
+# Unpack the archive using method A or B:
+# Method A for those using GNU tar
+tar xvfz petris-VERSION.tar.gz
+# Method B for those not using GNU tar
+gunzip petris-VERSION.tar.gz
+tar xvf petris-VERSION.tar
+
+# Change to the petris directory.
+cd petris
+
+# Make sure petris is executable.
+chmod a+x petris
+
+# If this is an upgrade from a previous version and you're not using Win32
+# then keep your options.
+mv ~/.games/petris-opts ~/.games/petrisrc
+
+# Optional. If you want petris to appear on your X menu do the following:
+cp debian-menu /etc/menu/petris
+update-menus
+
+# Note that the name of the file supplied, 'debian-menu', is changed in the
+# move to 'petris'. Note also that if you haven't used the paths given here you
+# must change the command path in /etc/menu/petris. The addition to the menu
+# will only appear when the window manager is restarted.
+
+# To run petris from the command line:
+/usr/games/petris/petris &
+
+# You could always either alias this or use a soft link to a directory on the
+# path to save typing the whole path. Note that 'deprecated' error messages
+# which appear are harmless and can be ignored.
+
+
+5. CHANGES
+
+1999/01/23  Modified options so that the program need not exec itself when the
+            board size is changed. Also improved modularisation.
+
+1999/02/02  Corrected a mistake that stopped buttons working with the mouse.
+            Made the game 'friendlier' to Win32 machines.
+
+1999/02/23  Changed to use MesgBox dialog - should now work properly under
+            Windows.
+
+1999/03/13  Minor tidying to Help and Options dialogues; added the option
+            which allows you to decide whether or not to intersperse random
+            layouts between predefined ones if using layouts.
+
+1999/03/18  Minor documentation changes to suit CPAN scripts area.
+
+1999/04/21  Included MesgBox.pm to make the .tar.gz file complete.
+
+1999/08/07  Minor fixes for Win32. Also Linux options file has been renamed
+            .petrisrc to be more conventional.
+
+1999/08/08  Changed licence to GPL.
+
+1999/08/28  Added `left handed' keystrokes; changed help into pod and now use
+            my standard render pod routines from tk-text.pl.
+
+1999/09/06  Removed MesgBox.pm at Lupe Christoph's (CPAN) request. You must
+            pick this module up separately now (although old versions will
+            work fine if you've already got one).
+
+1999/09/11  Now use an improved algorithm to ensure (I hope) that new pieces
+            are always a different colour from the background (previously they
+            would occassionally be `invisible').
+
+
+6. COPYRIGHT
+
+Copyright (c) Mark Summerfield 1998/9. All Rights Reserved.
+Petris may be used/distributed under the GPL.
+
+Contact: <summer@chest.ac.uk> - please include 'petris' in the
+subject line. 
+
+
+7. NOTES
+
+When I installed Debian Linux I was surprised to find that no Tetris was
+supplied. I felt this was a gap that I would like to fill. After developing
+Snake in a way that I felt would lend itself to the development of other
+'graph-paper' games, I decided to put it to the test and so developed this
+version of Tetris. I have called the game Petris because Andreas Koenig
+pointed out that Tetris was probably a trademark - the name Petris was
+suggested by Jarkko Hietaniemi. I think that the code supplied here could be
+adapted to many other 'graph-paper' games. 
+
+To customise by adding new shapes edit the petris-shapes.pl file (after making
+a backup and reading the comments first of course!) Similarly to add new
+layouts edit petris-layouts.pl.
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=iso-8859-1" http-equiv="content-type">
+  <title>ourfaces tree example 4</title>
+  <link href="../ourfaces.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a href="../platform/main.html" class="white"> Components </a> - <a
+ href="tree_overview.html" class="white"> Tree </a> - Various actions
+</h2>
+A user can define different
+actions for a node.
+<br>
+<br>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left;">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">...<br>&lt;o:tree value="#{TreeBean.treeModel2}"&gt;<br>    &lt;o:treeNodeType name="actionType" cssClass="tree" selectedCssClass="treeSelected" foundCssClass="found" icon="executionTypes.gif"/&gt;<br>    &lt;o:treeNode name="root" label="action examples" &gt;<br>        &lt;o:treeNode name="1" label="counter action"&gt;<br>             &lt;o:treeNode name="11" label="add 1" action="#{TreeBean.counterAction}" actionParameter="1" treeNodeType="actionType"  /&gt;<br>             &lt;o:treeNode name="12" label="add 10" action="#{TreeBean.counterAction}" actionParameter="10" treeNodeType="actionType" /&gt;<br>             &lt;o:treeNode name="13" label="subtract 1" action="#{TreeBean.counterAction}" actionParameter="-1" treeNodeType="actionType" /&gt;<br>             &lt;o:treeNode name="14" label="subtract 10" action="#{TreeBean.counterAction}" actionParameter="-10" treeNodeType="actionType" /&gt;<br>             &lt;o:treeNode name="15" label="reset counter" action="#{TreeBean.counterAction}" actionParameter="" treeNodeType="actionType"/&gt;                             <br>        &lt;/o:treeNode&gt;<br>        &lt;o:treeNode name="3" label="text action "&gt;<br>             &lt;o:treeNode name="31" label="print \"HELLO\"" action="#{TreeBean.textAction}" actionParameter="HELLO" treeNodeType="actionType"/&gt;<br>             &lt;o:treeNode name="32" label="print \"GOODBYE\"" action="#{TreeBean.textAction}" actionParameter="GOODBYE" treeNodeType="actionType"/&gt;<br>             &lt;o:treeNode name="33" label="clear text" action="#{TreeBean.textAction}" actionParameter="" treeNodeType="actionType"/&gt;<br>        &lt;/o:treeNode&gt;<br>        &lt;o:treeNode name="4" label="link action "&gt;<br>             &lt;o:treeNode name="41" label=" go back to 'Various Actions'" action="#{TreeBean.linkAction}" actionParameter="one_back" treeNodeType="actionType"/&gt;<br>             &lt;o:treeNode name="42" label=" go back to 'Tree'" action="#{TreeBean.linkAction}" actionParameter="two_back" treeNodeType="actionType"/&gt;<br>             &lt;o:treeNode name="43" label=" go back to 'Components'" action="#{TreeBean.linkAction}" actionParameter="three_back" treeNodeType="actionType"/&gt;<br>        &lt;/o:treeNode&gt;<br>    &lt;/o:treeNode&gt;<br>&lt;/o:tree&gt;<br>...<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td style="text-align: center; vertical-align: middle;">
+      <table cellpadding="0" cellspacing="0" border="0"
+ style="text-align: left; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ src="../skin/default/tree/example4.gif" alt=""
+ style="border: 0px solid ; width: 264px; height: 463px;"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example4.jsp"><img src="../skin/default/tree/execute.gif"
+ alt="" style="border: 0px solid ; height: 24px; width: 24px;" title=""
+ align="middle"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br style="color: rgb(0, 0, 0);">
+<div style="text-align: justify;"><span style="color: rgb(0, 0, 0);">The
+</span><code>action </code><span style="color: rgb(0, 0, 0);">attribute
+from the </span><code>&lt;ourfaces:treeNode&gt;</code><span
+ style="color: rgb(0, 0, 0);"> tag binds an </span><code>Action Method</code><span
+ style="color: rgb(0, 0, 0);"> to the component </span><code>UITreeNode
+which is a</code><span style="color: rgb(0, 0, 0);"></span><code>
+UIComponent </code><span style="color: rgb(0, 0, 0);">from JSF. <br>
+</span></div>
+<div style="text-align: justify;"><span style="color: rgb(0, 0, 0);">An
+</span><code>Action</code><span style="color: rgb(0, 0, 0);"> </span><span
+ style="color: rgb(0, 0, 0);">performs for example some logic and
+returns an outcome, which tells JSF's navigation model&nbsp; what page
+to access next. This kind of </span><code>Action </code><span
+ style="color: rgb(0, 0, 0);">is used by </span><code>linkAction.</code><span
+ style="color: rgb(0, 0, 0);">&nbsp;</span><code> </code><span
+ style="color: rgb(0, 0, 0);">With the </span><code>actionParameter</code><span
+ style="color: rgb(0, 0, 0);"> attribute a user can additional set a
+parameter for an</span>&nbsp; <code>Action</code><span
+ style="color: rgb(0, 0, 0);">.</span><span style="color: rgb(0, 0, 0);">
+For more information about using an </span><code>Action</code><span
+ style="color: rgb(0, 0, 0);">, how to bind an </span><code>Action<span
+ style="font-family: arial,sans-serif,helvetica;"> </span></code>to a
+component and so on please read the JSF Tutorial.</div>
+<span style="color: rgb(0, 0, 0);"><a
+ href="http://java.sun.com/j2ee/javaserverfaces/docs/tutorial.html"
+ target="_blank"></a>
+</span><span style="color: rgb(0, 0, 0);"> </span>
+<p></p>
+<p><code><span style="font-family: arial,sans-serif,helvetica;"><br>
+</span></code><a name="example5">
+</a></p>
+</body>
+</html>

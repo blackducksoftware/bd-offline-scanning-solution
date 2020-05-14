@@ -1,0 +1,2 @@
+?package(local.petris):needs="X11" section="Games/Board" \
+	title="Petris" command="/usr/games/petris/petris" 

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=iso-8859-1" http-equiv="content-type">
+  <title>o tree example 1</title>
+  <link href="ourfaces.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a class="white" href="../platform/main.html"> Components </a> - <a
+ class="white" href="tree_overview.html"> Tree </a> - Initialization
+by Tags
+</h2>
+For small trees the tree can be initialized within a JSP by using
+appropriate tags.<br>
+<br>
+<table style="text-align: left;" border="1" cellspacing="2"
+ cellpadding="2">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">&lt;%@ taglib uri="http://java.sun.com/jsf/core"    prefix="f" %&gt;<br>&lt;%@ taglib uri="http://java.sun.com/jsf/html"    prefix="h" %&gt;<br>&lt;%@ taglib uri="http://ourfaces.dev.sun.net/components" prefix="o" %&gt;<br><br>&lt;f:view&gt;<br>&lt;html&gt;<br>    &lt;head&gt; <br>        &lt;o:stylesheet path="/tree/tree-control.css"/&gt; <br>    &lt;/head&gt;<br>    &lt;body&gt;<br>        &lt;h:form&gt;<br>            &lt;o:tree value="#{TreeBean.treeModel1}"&gt;<br>                &lt;o:treeNode name="root" label="Me Myself" &gt;<br>                    &lt;o:treeNode name="2" label="My Father"&gt;<br>                        &lt;o:treeNode name="4" label="Grand Father"&gt;<br>                            &lt;o:treeNode name="8" label="Grandad's Father"/&gt;<br>                            &lt;o:treeNode name="9" label="Grandad's Mother"/&gt;<br>                        &lt;/o:treeNode&gt;<br>                        ...<br>                    &lt;/o:treeNode&gt;<br>                    &lt;o:treeNode name="3" label="My Mother"&gt;<br>                        ...<br>                    &lt;/o:treeNode&gt;<br>                &lt;/o:treeNode&gt;<br>            &lt;/o:tree&gt;<br>        &lt;/h:form&gt;<br>    &lt;/body&gt;<br>&lt;/html&gt;<br>&lt;/f:view&gt;<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td>
+      <table style="text-align: left; width: 100%;" border="0"
+ cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ style="border: 0px solid ; width: 171px; height: 135px;" alt=""
+ src="../skin/default/tree/example1.gif"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%;"><a
+ href="../faces/tree/example1.jsp"><img align="middle"
+ style="border: 0px solid ; width: 24px; height: 24px;" alt=""
+ src="../skin/default/tree/execute.gif"><br>
+(click me)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Within the tree tag brackets <code>&lt;o:tree&gt; ...
+&lt;/o:tree&gt;</code>
+all tree nodes are initialized. A tree node itself is identified by
+it's
+attribute<code> name</code>. The attribute <code>label </code>is
+shown on the rendered tree. A tree node tag bracket <code>&lt;o:treeNode&gt;
+...
+&lt;/o:treeNode&gt;</code><code></code> embraces a subtree. <br>
+<br>
+A user can generate two events on a tree node: <br>
+<ul>
+  <li>Clicking a toggle button&nbsp;<img align="middle"
+ style="width: 16px; height: 22px;" alt="" src="../skin/default/tree/handledownmiddle.gif">
+hides or shows the
+direct children of the related node.</li>
+  <li>Clicking the label of a tree node changes the style of the node
+into the style <span style="font-family: monospace;">.treeSelected</span>
+within the tree-control stylesheet which is set to bold here.
+Additionally you can trigger an action as is shown in
+further examples.</li>
+</ul>
+</body>
+</html>

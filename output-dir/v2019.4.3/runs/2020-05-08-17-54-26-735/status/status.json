@@ -1,0 +1,58 @@
+{
+  "formatVersion": "0.1.0",
+  "detectVersion": "6.2.1",
+  "detectors": [
+    {
+      "folder": "/Users/gsnyder/Projects/wf-scanning-solution/test_project",
+      "detectorType": "MAVEN",
+      "detectorName": "Maven Pom",
+      "descriptiveName": "MAVEN - Maven Pom",
+      "searchable": true,
+      "applicable": true,
+      "extractable": true,
+      "discoverable": true,
+      "extracted": true,
+      "searchableReason": "Passed.",
+      "applicableReason": "Passed.",
+      "extractableReason": "Passed.",
+      "relevantFiles": [],
+      "projectName": "my-app",
+      "projectVersion": "1.0",
+      "codeLocationCount": 1
+    },
+    {
+      "folder": "/Users/gsnyder/Projects/wf-scanning-solution/test_project/my-node-app",
+      "detectorType": "NPM",
+      "detectorName": "Package Lock",
+      "descriptiveName": "NPM - Package Lock",
+      "searchable": true,
+      "applicable": true,
+      "extractable": true,
+      "discoverable": true,
+      "extracted": true,
+      "searchableReason": "Passed.",
+      "applicableReason": "Passed.",
+      "extractableReason": "Passed.",
+      "relevantFiles": [],
+      "projectName": "my-node-app",
+      "projectVersion": "1.0.0",
+      "codeLocationCount": 1
+    }
+  ],
+  "status": [
+    {
+      "key": "MAVEN",
+      "status": "SUCCESS"
+    },
+    {
+      "key": "NPM",
+      "status": "SUCCESS"
+    },
+    {
+      "key": "Scan Target /Users/gsnyder/Projects/wf-scanning-solution/test_project",
+      "status": "SUCCESS"
+    }
+  ],
+  "issues": [],
+  "results": []
+}

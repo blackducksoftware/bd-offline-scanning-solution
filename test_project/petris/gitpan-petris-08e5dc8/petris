@@ -1,0 +1,240 @@
+#!/usr/bin/perl -w
+
+# $Id: petris,v 1.18 1999/09/11 15:41:50 root Exp root $
+
+# Copyright (c) Mark Summerfield 1998/9. All Rights Reserved.
+# May be used/distributed under the GPL.
+
+# TODO Fix colour bug - some pieces start off multi-coloured - this happens
+#      sometimes after clearing a row.
+
+use strict ;
+
+use Tk ;
+use Tk::MesgBox ;
+
+use FindBin qw( $RealBin ) ;
+use lib $RealBin ;
+
+use vars qw( $VERSION $DEBUG
+             $BOARD   $HEAP   $BLOCK
+             $ROTATE  $LEFT   $RIGHT      $DOWN
+             $RUNNING $PAUSED $NOTRUNNING
+             %Global  %Const  %Opt 
+             $Win 
+             %Buttons %Board  %Block ) ; 
+
+$VERSION = '1.14' ; # Application version.
+$DEBUG   =  0 ;
+
+my $DieOnWarn      = 1 ;
+my $WarnInDialogue = 0 ;
+
+
+&initialise ;
+
+MainLoop ;
+
+
+BEGIN {
+    $SIG{__WARN__} = sub {
+        if( $WarnInDialogue and defined $Win ) {
+            my $msg = $Win->MesgBox(
+                            -title => "Petris Error",
+                            -text  => $_[0],
+                            -icon  => 'ERROR',
+                            ) ;
+            $msg->Show ;
+        }
+        else {
+            print STDOUT join( "\n", @_ ), "\n" ;
+        }
+    } ;
+}
+
+
+sub initialise {
+
+    $Global{WROTE_OPTS} = 0 ;
+
+    $Win = MainWindow->new() ;
+    $Win->title( "Petris" ) ; 
+
+    &load_library( "petris-consts.pl" ) ;
+    $Global{STATE} = $NOTRUNNING ;      # Need consts to set this.
+    &load_library( "petris-opts.pl" ) ; # Default.
+    &read_opts ;                        # User.
+    &set_consts ;                       # Need opts to set these.
+    &load_library( "petris-shapes.pl" ) ;
+    &load_library( "petris-layouts.pl" ) ;
+    &load_library( "petris-buttons.pl" ) ;
+    &load_library( "petris-button-commands.pl" ) ;
+    &load_library( "petris-board.pl" ) ;
+    &load_library( "petris-board-commands.pl" ) ;
+    &load_library( "petris-keys.pl" ) ;
+    &load_library( "petris-help.pl" ) ;
+    &load_library( "petris-options.pl" ) ;
+    &load_library( "petris-action.pl" ) ;
+
+    &load_library( "tk-text.pl" ) ;
+
+    &window_centre( $Win ) ;
+    &board::create ;
+    &button::start ;
+}
+
+
+sub window_centre {
+    my $win = shift ;
+
+    $win->update ;
+    my $x = int( ( $win->screenwidth  - $win->width  ) / 2 ) ;
+    my $y = int( ( $win->screenheight - ( $win->height - 20 ) ) / 2 ) ;
+    $win->geometry( "+$x+$y" ) ;
+}
+
+
+sub read_opts {
+
+    return unless -e $Const{OPTS_FILE} ;
+
+    if( open( IN, $Const{OPTS_FILE} ) ) {
+        local $_ ;
+        while( <IN> ) {
+            next if /^#/ or /^\s*$/ ;
+            chomp ;
+            my( $key, $val ) = /^([^\s:]+)\s*:\s*(.*)/ ;
+            $val = $1 if $val =~ /([^#]+)#/ ;
+            $val =~ s/\s+$// ;
+            $Opt{uc $key} = $val ;
+        }
+        close IN ;
+        &opts_check ;
+    }
+    else {
+        warn "Failed to read $Const{OPTS_FILE}: $!.\n" ;
+    }
+}
+
+
+sub write_opts {
+
+    # Create the games opt directory if it doesn't exist.
+    $Const{OPTS_FILE} =~ m{^(.*)/} ;
+    mkdir $1, 0666 if defined $1 and not -e $1 ;
+
+    if( open( OUT, ">$Const{OPTS_FILE}" ) ) {
+        local $_ ;
+        foreach ( sort keys %Opt ) {
+            print OUT "$_: $Opt{$_}\n" ;
+        }
+        close OUT ;
+    }
+    else {
+        warn "Failed to write $Const{OPTS_FILE}: $!.\n" ;
+    }
+}
+
+
+sub set_consts {
+
+    $Const{BOARD_OFFSET}   = int( ( $Opt{BOARD_SQUARE_LENGTH} - 
+                                    $Const{BOARD_SQUARE_LENGTH_MIN} ) / 2 ) + 1 ; 
+
+    $Const{BOARD_X_LENGTH} = $Opt{BOARD_SQUARES_X} * $Opt{BOARD_SQUARE_LENGTH} ;
+    $Const{BOARD_Y_LENGTH} = $Opt{BOARD_SQUARES_Y} * $Opt{BOARD_SQUARE_LENGTH} ;
+}
+
+
+sub get_colour {
+    
+    # Pick out the hex colour values.
+    my( $red1, $green1, $blue1 ) = 
+        $Const{BOARD_BACKGROUND_COLOUR} =~ /([0-9A-Fa-f]){2}/og ; 
+    $red1   = hex $red1 ;
+    $green1 = hex $green1 ;
+    $blue1  = hex $blue1 ;
+    # Brightness calculation taken from Mastering Algorithms with Perl.
+    my $brightness = ( $red1   * 0.118 ) + 
+                     ( $green1 * 0.231 ) + 
+                     ( $blue1  * 0.043 ) ;
+
+    my( $red2, $green2, $blue2 ) ; 
+
+    while( 1 ) {
+        # We don't want the random colour to be too close to the background
+        # colour or it will be `invisible'.
+        $red2   = int( rand( 0xFF ) ) ;
+        $green2 = int( rand( 0xFF ) ) ;
+        $blue2  = int( rand( 0xFF ) ) ;
+        my $newbrightness = ( $red2   * 0.118 ) + 
+                            ( $green2 * 0.231 ) + 
+                            ( $blue2  * 0.043 ) ;
+
+        last if abs( $brightness - $newbrightness ) > 10 and
+                ( ( abs( $red1   - $red2 ) + 
+                    abs( $green1 - $green2 ) +
+                    abs( $blue1  - $blue2 ) ) > 10 ) ;
+    }
+
+    sprintf "#%02X%02X%02X", $red2, $green2, $blue2 ;
+}
+
+
+sub load_library {
+    my $file = shift ;
+    
+    unless( my $return = do "${file}" ) {
+        my $warned = 0 ;
+        warn "Failed to parse $file: $@.\n", 
+            $warned = 1 if $@ ;
+        warn "Failed to do $file: $!\n",     
+            $warned = 1 if not $warned and not defined $return ;
+        warn "Failed to run $file.\n",       
+            $warned = 1 if not $warned and $return ;
+        die "Failed to load $file.\n" if $DieOnWarn ;
+    }
+}
+
+
+__END__
+
+
+=pod SCRIPT CATEGORIES
+
+Games
+
+=pod DESCRIPTION
+
+Perl/Tk Tetris clone with extensions.
+
+=pod PREREQUISITES
+
+Pragmas:
+
+C<strict>
+C<lib>
+
+Modules:
+
+C<Tk>
+C<Tk::MesgBox>
+C<FindBin>
+
+=pod COREQUISITES
+
+None.
+
+=pod OSNAMES
+
+Developed under:
+Linux/X-Windows
+
+Known to run under:
+Win32
+
+=pod LICENSE
+
+GPL.
+
+=cut

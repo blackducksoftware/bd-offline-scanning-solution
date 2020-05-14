@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=iso-8859-1" http-equiv="content-type">
+  <title>ourfaces tree example 8</title>
+  <link href="../ourfaces.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a href="../platform/main.html" class="white"> Components </a> - <a
+ href="tree_overview.html" class="white"> Tree </a> - Sorting Nodes
+</h2>
+<br>
+<span style="color: rgb(0, 0, 0);">There are two types of sorting:
+Default is an alpha-numeric sorting of the nodes according to their
+labels. However, when creating a TreeModel one could switch on an
+explizit sorting of the Nodes independent of the labels.</span><br>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left;">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">&lt;f:view&gt;<br>...<br>&lt;o:stylesheet path="/tree/tree-control.css"/&gt;    <br>&lt;h:form id="navigationForm"&gt;<br>...<br>    &lt;table&gt; <br>        &lt;tr&gt; <br>            &lt;th class="sub"&gt;<br>                &lt;h:commandButton type="image" image="/images/moveTop.gif"  action="#{treeNavigationActions.moveTop}"  title="moves the selected node to top"/&gt;<br>                &lt;h:commandButton type="image" image="/images/moveUp.gif"  action="#{treeNavigationActions.moveUp}"  title="moves up the selected node"/&gt;<br>                &lt;h:commandButton type="image" image="/images/moveDown.gif"  action="#{treeNavigationActions.moveDown}"  title="moves down the selected node"/&gt;<br>                &lt;h:commandButton type="image" image="/images/moveBottom.gif"  action="#{treeNavigationActions.moveBottom}"  title="moves the selected node to bottom"/&gt;<br>            &lt;/th&gt;                   <br>            &lt;th class="sub"&gt;<br>                &lt;h:command_button type="image" image="/images/moveToPos.gif"  action="#{treeNavigationActions.moveToPosition}"  title="moves the selected node to position"/&gt;<br>                &lt;h:inputText size="3" id="posInput"  value="#{treeNavigationActions.pos}" converter="integer" /&gt;<br>            &lt;/th&gt;<br>            &lt;th class="sub"&gt;<br>                &lt;h:commandButton type="image" image="/images/numberingOn.gif"  action="#{treeNavigationActions.toggleNumbering}"  title="switches the numbering of nodes on/off"/&gt;<br>            &lt;/th&gt;<br>        &lt;/tr&gt;<br>    &lt;/table&gt;   <br>&lt;/h:form&gt;<br>&lt;h:form id="treeForm"&gt;<br>    &lt;o:tree id="tree8"  binding="#{TreeBean.UITree8}"/&gt;/&gt;<br>&lt;/h:form&gt;<br>&lt;h:messages/&gt;<br>...<br>&lt;/f:view&gt;<br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td
+ style="background-color: rgb(255, 255, 204); text-align: center; vertical-align: middle;">
+      <table cellpadding="0" cellspacing="0" border="0"
+ style="text-align: left; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ style="border: 0px solid ; width: 278px; height: 294px;" alt=""
+ src="../skin/default/tree/example8.gif"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example8.jsp"><img align="middle" title=""
+ style="border: 0px solid ; height: 24px; width: 24px;" alt=""
+ src="../skin/default/tree/execute.gif"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<span style="color: rgb(0, 0, 0);">The navigation panel
+has the following sorting functions:<br>
+</span>
+<ul>
+  <li><code><img style="width: 16px; height: 17px;" alt=""
+ src="../skin/default/tree/moveTop.gif"> moveTop </code><code></code><span
+ style="color: rgb(0, 0, 0);">This </span><code> </code><code>Action </code><span
+ style="color: rgb(0, 0, 0);">moves the selected node to the first
+position.<br>
+    </span></li>
+  <li><code><img style="width: 21px; height: 21px;" alt=""
+ src="../skin/default/tree/moveUp.gif"> moveUp </code><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">This </span><code>
+    </code><code>Action </code><span style="color: rgb(0, 0, 0);">moves
+the selected node one position up.</span></span><span
+ style="color: rgb(0, 0, 0);"></span> </li>
+  <li><code><img style="width: 21px; height: 21px;" alt=""
+ src="../skin/default/tree/moveDown.gif"> moveDown </code><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">This </span><code>
+    </code><code>Action </code><span style="color: rgb(0, 0, 0);">moves
+the selected node one position down.</span></span><span
+ style="color: rgb(0, 0, 0);"></span></li>
+  <li><code><img src="../skin/default/tree/moveBottom.gif" alt=""
+ style="width: 16px; height: 17px;"> moveBottom </code><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">This </span><code>
+    </code><code>Action </code><span style="color: rgb(0, 0, 0);">moves
+the selected node to the last position.</span></span><span
+ style="color: rgb(0, 0, 0);"></span><br>
+    <code></code></li>
+  <li><code><img style="width: 23px; height: 23px;" alt=""
+ src="../skin/default/tree/moveToPos.gif"> moveToPos </code><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">This </span><code>
+    </code><code>Action </code><span style="color: rgb(0, 0, 0);">moves
+the selected node to a defined position.</span></span><span
+ style="color: rgb(0, 0, 0);"></span><code></code></li>
+  <li><code><img src="../skin/default/tree/numberingOn.gif" alt=""
+ style="width: 25px; height: 25px;"> numberingOn </code><span
+ style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">This </span><code>
+    </code><code>Action </code><span style="color: rgb(0, 0, 0);">switches
+the 'showing of numbers' on and off.</span></span><span
+ style="color: rgb(0, 0, 0);"></span><br>
+    <span style="color: rgb(0, 0, 0);"></span><br>
+    <span style="color: rgb(0, 0, 0);"></span></li>
+</ul>
+<span style="color: rgb(0, 0, 0);"></span><code></code><span
+ style="font-family: arial,sans-serif,helvetica;"><br>
+<br>
+</span>
+</body>
+</html>

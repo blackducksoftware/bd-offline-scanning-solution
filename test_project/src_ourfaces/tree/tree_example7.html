@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=iso-8859-1" http-equiv="content-type">
+  <title>ourfaces tree example 7</title>
+  <link href="../ourfaces.css" type="text/css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<h2> <a href="../platform/main.html" class="white"> Components </a> - <a
+ href="tree_overview.html" class="white"> Tree </a> - Navigation Panel
+with
+Scrolling Functionality
+</h2>
+<span style="color: rgb(0, 0, 0);">For navigation in really big
+trees you can add a scrolling function to the navigation panel</span><span
+ style="color: rgb(0, 0, 0);">.</span><span style="color: rgb(0, 0, 0);"></span><br>
+<br>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left;">
+  <tbody>
+    <tr>
+      <th>
+      <pre style="background-color: rgb(238, 238, 238);">&lt;f:view&gt;<br>...<br>&lt;h:form id="scrollingForm"&gt;<br>    &lt;table&gt; <br>        &lt;tr&gt;<br>            &lt;th class="sub" style="color: rgb(0, 0, 0);"&gt;<br>                &lt;b&gt;SCROLLING&lt;/b&gt;<br>            &lt;/th&gt;<br>            &lt;th class="sub"&gt;<br>                &lt;h:selectOneMenu onchange="submit()" id="numOfNodes" value="#{treeNavigationActions.numberOfNodesToRender}" title="number of rendered nodes" &gt;<br>                     &lt;f:selectItems id="select1" value="#{treeNavigationActions.numberOfNodesToRenderOption}"/&gt;<br>                &lt;/h:selectOneMenu&gt;<br>             &lt;/th&gt;<br>            &lt;th class="sub"&gt;<br>                &lt;h:commandButton id="back"  value="&lt; back"  action="#{treeNavigationActions.scrollBackAction}"  title="scroll a page up"/&gt;<br>                &lt;h:inputText value="#{treeNavigationActions.firstNodeToRender}" onchange="submit()" size="2" title="jump to node nr. " converter="integer" /&gt;<br>                &lt;h:commandButton id="toNode"  value="jump"   title="go to selected node number"/&gt;<br>                &lt;h:commandButton id="forward"  value="forward &gt;"   action="#{treeNavigationActions.scrollForwardAction}"  title="scroll a page down"/&gt;<br>             &lt;/th&gt;<br>         &lt;/tr&gt;   <br>    &lt;/table&gt;<br>&lt;/h:form&gt;<br>&lt;h:form  id="treeForm"&gt;<br>    &lt;o:tree id="tree7"   binding="#{TreeBean.UITree5}"/&gt;<br>&lt;/h:form&gt;<br>...<br>&lt;/f:view&gt;<br><br></pre>
+      </th>
+    </tr>
+    <tr>
+      <td
+ style="background-color: rgb(255, 255, 204); text-align: center; vertical-align: middle;">
+      <table cellpadding="0" cellspacing="0" border="0"
+ style="text-align: left; width: 100%;">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><img
+ style="border: 0px solid ; height: 211px; width: 342px;" alt=""
+ src="../skin/default/tree/example7.gif"></td>
+            <td
+ style="text-align: center; vertical-align: middle; width: 100%; background-color: rgb(255, 255, 255);"><a
+ href="../faces/tree/example7.jsp"><img align="middle" title=""
+ style="border: 0px solid ; height: 24px; width: 24px;" alt=""
+ src="../skin/default/tree/execute.gif"><br>
+(run)</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<span style="color: rgb(0, 0, 0);">The scrolling function consists of :<br>
+</span>
+<ul>
+  <li><code><img src="../skin/default/tree/numberNodes.gif" alt=""
+ style="width: 45px; height: 26px;"> </code><code></code><span
+ style="color: rgb(0, 0, 0);">&nbsp;</span><code></code><code>ComboBox </code><span
+ style="color: rgb(0, 0, 0);">Sets the number of nodes to display (page
+size)<br>
+    </span></li>
+  <li><code><img src="../skin/default/tree/back.gif" alt=""
+ style="width: 60px; height: 26px;"> scrollBackAction </code><span
+ style="color: rgb(0, 0, 0);">This </span><code> </code><code>Action <span
+ style="font-family: arial,sans-serif,helvetica,monospace,monospace;">srolls
+a page up</span></code></li>
+  <li><span
+ style="font-family: arial,sans-serif,helvetica,monospace,monospace;"><img
+ src="../skin/default/tree/nodeNumber.gif" alt=""
+ style="width: 40px; height: 26px;"> </span><code>TextField </code><span
+ style="color: rgb(0, 0, 0);">Jumps to the node with the number of the
+textfield</span><span style="color: rgb(0, 0, 0);"></span></li>
+  <li><code><img src="../skin/default/tree/forward.gif" alt=""
+ style="width: 85px; height: 26px;"> scrollForwardAction </code><span
+ style="color: rgb(0, 0, 0);">This </span><code> </code><code>Action <span
+ style="font-family: arial,sans-serif,helvetica;">scrolls a page down</span></code><span
+ style="color: rgb(0, 0, 0);"><br>
+    </span></li>
+</ul>
+<br>
+</body>
+</html>

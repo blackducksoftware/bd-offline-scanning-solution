@@ -1,0 +1,95 @@
+=head1 Petris Help
+
+# $Id: petris-help.pod,v 1.3 1999/08/28 22:14:01 root Exp $
+
+# Copyright (c) Mark Summerfield 1999. All Rights Reserved.
+# May be used/distributed under the GPL.
+
+Press <C<Escape>> or <C<q>> to close this help window; scroll using
+the scrollbar, arrow keys, <C<PageUp>> or <C<PageDown>>.
+
+=head2 Aim
+
+This is a standard Tetris game. The aim is to gain the highest possible
+score.
+
+=head2 Play
+
+You must fit the dropping blocks together so as to completely fill rows.
+Each filled row is removed from the board and the score is increased
+for every removed row. The dropping blocks can be moved from side to side
+and rotated - but they cannot overlap the edges or the blocks that have
+gone before. Game ends when you cannot place another block on the board
+
+=head2 Keystrokes
+
+=over
+
+=item *
+
+C<s>    Start a new game.
+
+=item
+
+C<SPACEBAR> Pause/resume the game.
+
+=item
+
+C<o>    Change the options.
+
+=item
+
+C<a>    Show the About box.
+
+=item
+
+C<F1>   Invoke this help window.
+
+=item
+
+C<q>    Quit the game.
+
+=item   
+
+C<UP-ARROW>, C<k>, C<f> Rotate the block. (Resumes if paused.)
+
+=item
+
+C<DOWN-ARROW>, C<j>, C<b>   Drop the block immediately. (Resumes if paused.)
+
+=item
+
+C<LEFT-ARROW>, C<h>, C<d>   Move the block left. (Resumes if paused.)
+
+=item
+
+C<RIGHT-ARROW>, C<l>, C<g>  Move the block right. (Resumes if paused.)
+
+=back
+
+To see other keystrokes, or to change or add your own, see the file
+C<petris-keys.pl>.
+
+=head2 Options
+
+Options should be set using the Options dialogue. User options are stored in
+C<~/.games/petrisrc> (or C<PETRIS.INI> for Win32).
+
+Any options you change in this file take precedence over the default options.
+To reinstate a default option delete or comment out (with C<#>) the option(s)
+you wish to reinstate - the next time you run the game the defaults will be
+back.
+
+
+=head2 Copyright
+
+C<summer@chest.ac.uk>
+
+Copyright (c) Mark Summerfield 1999. All Rights Reserved.
+
+Petris may be used/distributed under the GPL.
+
+Petris is a clone of Tetris which was invented by Alexey Paszhitnov, Dmitry
+Pavlovsky and Vadim Gerasimov.
+
+=cut
