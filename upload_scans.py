@@ -25,8 +25,7 @@ from blackduck.HubRestApi import HubInstance, object_id
 # TODO: Refactor to use manifest file OR give the option to use manifest instead of list from command line
 
 parser = argparse.ArgumentParser("Upload offline or dry-run scans to a BD server using the REST API")
-parser.add_argument("scan_files", nargs='+', help="List of scan files to upload")
-parser.add_argument("-c", "--custom_field_file", help="The name of a JSON-formatted file with custom field values in it that go with the scan data")
+parser.add_argument("manifest", help="Manifest file (JSON format) that lists the scan files to upload and custom field value file")
 parser.add_argument("-p", "--project", help="Override the name of the project to map the scans to, and optionally apply custom field values to")
 parser.add_argument("-v", "--version", help="Override the name of the version to map the scans to, and optionally apply custom field values to")
 parser.add_argument("-k", "--keep", action='store_true', help="Keep any temporary file(s) created - useful for debug")
@@ -43,7 +42,9 @@ file_type_map = {
     '.json':'SIG_SCAN'
 }
 
-for file in args.scan_files:
+manifest = json.load(open(args.manifest, 'r'))
+
+for file in manifest['scan_files']:
     temp_file = False
     with open(file, 'r') as f:
         scan_data = json.load(f)
@@ -108,8 +109,8 @@ for file in args.scan_files:
 #
 # Upload custom field values to the Project-version
 #
-if args.custom_field_file:
-    with open(args.custom_field_file, 'r') as f:
+if 'custom_field_file' in manifest:
+    with open(manifest['custom_field_file'], 'r') as f:
         custom_field_data = json.load(f)
 
         #
@@ -120,7 +121,7 @@ if args.custom_field_file:
         version_name = args.version if args.version else custom_field_data['version']
 
         logging.info("Updating custom field values on project {}, version {} using file {}".format(
-            project_name, version_name, args.custom_field_file))
+            project_name, version_name, manifest['custom_field_file']))
 
         # remove values not needed to update
         del custom_field_data['project']

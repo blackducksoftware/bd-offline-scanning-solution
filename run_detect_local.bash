@@ -164,7 +164,7 @@ stage_scan_files ${SCAN_FILES} ${BOM_FILES}
 cd ${BD_VERSION}
 
 write_custom_field_values custom-field-values.json
-create_manifest custom-field-values.json ${SCAN_FILES} ${BOM_FILES}
+create_manifest $(pwd)/custom-field-values.json ${SCAN_FILES} ${BOM_FILES}
 
 # TODO: Archive (e.g. zip) files together for pushing to Artifactory?
 
