@@ -128,6 +128,7 @@ function stage_scan_files()
 
 function write_custom_field_values()
 {
+	echo "Writing custom field values to $(pwd)/$1"
 	cat > $1 <<EOF
 {
 	"project": "${PROJECT_NAME}",
@@ -142,6 +143,7 @@ EOF
 
 function create_manifest()
 {
+	echo "Creating manifest in $(pwd)/manifest.json"
 	custom_field_file=$1
 	shift
 	scan_files="["
